@@ -1,11 +1,16 @@
-import clgLogo from "../../../assets/img/College logo.png";
-import deptLogo from "../../../assets/img/Department log.png";
+import clgLogo from "../../../assets/img/ClgLogo/College logo.png";
+import deptLogo from "../../../assets/img/ClgLogo/Department log.png";
+import background from '../../../assets/img/Background/jjk.jpg';
+
+import Background from "../Background/Background";
 
 import "./Header.css";
 
 export default function Header() {
   return (
-    <>
+    <div className="header-main">
+      <Background />
+      {/* <img src={background} className='setBackground' alt="" /> */}
       <header>
         <div>
           <div className="al-L">
@@ -25,7 +30,6 @@ export default function Header() {
           <li>Home</li>
         </ul>
       </nav>
-
-    </>
+    </div>
   );
 }
