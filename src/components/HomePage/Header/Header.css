@@ -1,0 +1,39 @@
+header div{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+header  img {
+    width: 250px;
+}
+
+.al-L {
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.al-R {
+    padding-right: 10px;
+    padding-top: 20px;
+    justify-content: right;
+}
+
+nav {
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.26);
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    padding-left: 50px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
