@@ -61,3 +61,15 @@ nav ul li {
     top: 75%;
     left: 33%;
 }
+
+.align-btn {
+    display: flex;
+    top: 450px;
+    left: 30px;
+    float: left;
+}
+.align-btn {
+    position: relative;
+    gap: 50px;
+    float: left;
+}

@@ -5,9 +5,9 @@ import Background from "./components/HomePage/Background/Background";
 function App() {
   return (
     <>
-      {/* <Background /> */}
+      <Background />
       <Header />
-      <AboutUs />
+      {/* <AboutUs /> */}
     </>
   );
 }
