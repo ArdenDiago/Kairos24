@@ -6,12 +6,12 @@ export default function AboutUs() {
   return (
     <>
       <section>
-        <div className="about-section">
-          <h1>About Us </h1>
+        <div className="as">
+          <h1 className="abp">About US</h1>
 
           <div className="a">
             <div className="row">
-              {cardDetails.map((item, index) => (<AboutUsCard key={index} {...item} />))}
+              {/* {cardDetails.map((item, index) => (<AboutUsCard key={index} {...item} />))} */}
             </div>
           </div>
         </div>
