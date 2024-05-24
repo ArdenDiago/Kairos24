@@ -41,7 +41,7 @@ export default function Forms() {
               onValueChange={(e) => setPhoneNO(e.target.value)}
             />
             <NamesAndPhoneNo
-              text="Name"
+              text="Email"
               textType="text"
               textId="name"
               textPlaceHolder={collegeName}
