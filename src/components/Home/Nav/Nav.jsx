@@ -26,7 +26,7 @@ export default function Nav() {
                 <a href="#">Home</a>
               </li>
               <li className="nav-item">
-                <a href="#">AboutUs</a>
+                <a href="#AbtUs">AboutUs</a>
               </li>
               <li className="nav-item">
                 <a href="#">Events</a>

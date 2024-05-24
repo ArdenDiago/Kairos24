@@ -14,7 +14,6 @@ export default function Forms() {
   function checker() {
     console.log(name, phoneNO, collegeName);
     console.log(name.length, phoneNO.length, collegeName.length);
-    
   }
 
   return (

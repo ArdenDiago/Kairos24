@@ -5,7 +5,7 @@ import { cardDetails } from "./AboutUsCardDetails";
 export default function AboutUs() {
   return (
     <>
-    <div className="about">
+    <div className="about" id='AbtUs'>
       <section>
         <div className="as">
           <h1 className="abp">About US</h1>
