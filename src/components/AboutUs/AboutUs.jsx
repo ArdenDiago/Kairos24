@@ -5,9 +5,10 @@ import { cardDetails } from "./AboutUsCardDetails";
 export default function AboutUs() {
   return (
     <>
+    <div className="about" id='AbtUs'>
       <section>
-        <div className="about-section">
-          <h1>About Us </h1>
+        <div className="as">
+          <h1 className="abp">About US</h1>
 
           <div className="a">
             <div className="row">
@@ -16,6 +17,7 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 }

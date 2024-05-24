@@ -14,7 +14,6 @@ export default function Forms() {
   function checker() {
     console.log(name, phoneNO, collegeName);
     console.log(name.length, phoneNO.length, collegeName.length);
-    
   }
 
   return (
@@ -42,7 +41,7 @@ export default function Forms() {
               onValueChange={(e) => setPhoneNO(e.target.value)}
             />
             <NamesAndPhoneNo
-              text="Name"
+              text="Email"
               textType="text"
               textId="name"
               textPlaceHolder={collegeName}

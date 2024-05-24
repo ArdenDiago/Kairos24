@@ -4,9 +4,9 @@
   align-items: center;
   position: relative;
   padding: 0.6em 2em;
-  border: mediumspringgreen solid 0.15em;
+  border: rgb(134, 10, 10) solid 0.15em;
   border-radius: 0.25em;
-  color: mediumspringgreen;
+  color: rgb(12, 223, 255);
   font-size: 1.5em;
   font-weight: 600;
   cursor: pointer;
@@ -24,7 +24,7 @@
 }
 
 .button:active {
-  border-color: teal;
+  border-color: rgb(240, 38, 173);
 }
 
 .button::after,
@@ -33,7 +33,7 @@
   position: absolute;
   width: 9em;
   aspect-ratio: 1;
-  background: mediumspringgreen;
+  background: rgb(250, 129, 0);
   opacity: 50%;
   border-radius: 50%;
   transition: transform 500ms, background 300ms;
@@ -59,7 +59,7 @@
 
 .button:active:before,
 .button:active:after {
-  background: teal;
+  background: rgb(8, 14, 194);
 }
 @media screen and (max-width: 320px) {
   .button {
