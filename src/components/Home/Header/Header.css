@@ -1,0 +1,122 @@
+.hero-section {
+  background-image: url("https://img.freepik.com/free-photo/bright-pop-landscape-design_23-2149213461.jpg?t=st=1716301402~exp=1716305002~hmac=0d3cb77c154f8f48bb75813a2e355772bf38fc538879ce55a294a62b4c4b027a&w=740");
+  height: 40.4em;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-10 {
+  position: relative;
+  top: 15px;
+}
+
+.Main-Page {
+  position: absolute;
+  top:25vmax;
+  left: 50%;
+}
+
+.Main-Page > h1 {
+  font-size: 15em;
+  text-align: center;
+}
+
+.btn-master {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  width: fit-content;
+  /* background-color: orange; */
+  top: 25em;
+  left: 3em;
+}
+
+/* Media */
+@media screen and (max-width: 320px) {
+  .hero-section {
+    background-image: url("../../../assets/img/Timer/jjk320.jpeg");
+  }
+  .Main-Page{
+  top:50vmax;
+  }
+  .Main-Page > h1 {
+    font-size: 4.5em;
+  }
+  .btn-master {
+    display: block;
+    left: 0em;
+  }
+  .btn-master > button {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .hero-section {
+    background-image: url("../../../assets/img/Timer/jjk320.jpeg");
+  }
+  .Main-Page{
+    top:50vmax;
+    }
+  .Main-Page > h1 {
+    font-size: 5em;
+  }
+  .btn-master {
+    display: block;
+    left: 1em;
+  }
+  .btn-master > button {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .hero-section {
+    background-image: url("../../../assets/img/Timer/jjk320.jpeg");
+  }
+  .Main-Page {
+    top: 10em;
+  }
+  .Main-Page > h1 {
+    font-size: 5em;
+  }
+  .btn-master {
+    left: 1em;
+  }
+  .btn-master > button {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .Main-Page {
+    top: 250px;
+  }
+  .Main-Page > h1 {
+    font-size: 9em;
+  }
+  .btn-master {
+    left: 0.9em;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .Main-Page {
+    top: 300px;
+  }
+  .Main-Page > h1 {
+    font-size: 9em;
+  }
+  .btn-master {
+    left: 0.9em;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 2560px) {
+  .Main-Page {
+    top: 400px;
+    font-size: 1em;
+  }
+}
