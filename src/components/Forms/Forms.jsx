@@ -22,29 +22,29 @@ export default function Forms() {
         <video autoPlay muted loop id="video-bg">
           <source src={video} type="video/mp4" />
         </video>
-        <div class="form-container">
-          <div class="event-logo"></div>
-          <div class="event-title">KAIROS</div>
-          <div class="inputs">
+        <div className="form-container">
+          <div className="event-logo"></div>
+          <div className="event-title">KAIROS 24</div>
+          <div className="inputs">
             <NamesAndPhoneNo
               text="Name"
               textType="text"
               textId="name"
-              textPlaceHolder={name}
+              textPlaceHolder="Name"
               onValueChange={(e) => setName(e.target.value)}
             />
             <NamesAndPhoneNo
               text="Phone No"
               textType="tel"
               textId="PhoneNo"
-              textPlaceHolder={phoneNO}
+              textPlaceHolder="Phone No"
               onValueChange={(e) => setPhoneNO(e.target.value)}
             />
             <NamesAndPhoneNo
               text="Email"
               textType="text"
               textId="name"
-              textPlaceHolder={collegeName}
+              textPlaceHolder="College Name"
               onValueChange={(e) => setCollegeName(e.target.value)}
             />
             <br />
