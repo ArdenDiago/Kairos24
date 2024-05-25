@@ -8,10 +8,10 @@ import Forms from "./components/Forms/Forms";
 function App() {
   return (
     <>
-    {/* <Header /> */}
-    <Events />
-    {/* <Forms /> */}
-    {/* <AboutUs /> */}
+    <Header />
+    {/* <Events /> */}
+    <Forms />
+    <AboutUs />
     </>
   );
 }
