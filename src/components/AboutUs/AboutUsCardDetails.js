@@ -2,24 +2,27 @@ export const cardDetails = [
   {
     cssClassName: "spc",
     title: "St Pauls College",
-    DESCRIPTION: `<p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Mollitia, natus quasi ratione doloremque illo quas nostrum
-      harum culpa atque corrupti voluptas expedita ea iure dicta
-      dignissimos. Obcaecati, non. Illo laboriosam error non
-      officiis, ipsa at excepturi assumenda natus beatae
-      similique repellat distinctio et? Cupiditate sequi
-      voluptates nihil eveniet mollitia nulla? </p>`,
+    DESCRIPTION: `<p>ST PAULS COLLEGE, Bengaluru is one of the educational undertakings of the society of St Paul, an 
+    international religious congregation founded by Blessed James Alberione in Alba, Italy on 20 August 
+    1914. It is affiliated to Bangalore University and is recognized by the Government of Karnataka. The 
+    college is located at Nagasandra near peenya Industrial area, bangalore. Embarking on a journey 
+    towards excellence, ST PAULS COLLEGE has attained NAAC Accreditation with a B++ Grade, 
+    boasting a commendable 2.97 CGPA.</p>`,
   },
   {
     cssClassName: "peg",
     title: "Pegasus",
-    DESCRIPTION: `<p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Mollitia, natus quasi ratione doloremque illo quas nostrum
-      harum culpa atque corrupti voluptas expedita ea iure dicta
-      dignissimos. Obcaecati, non. Illo laboriosam error non
-      officiis, ipsa at excepturi assumenda natus beatae
-      similique repellat distinctio et? Cupiditate sequi
-      voluptates nihil eveniet mollitia nulla? </p>`,
+    DESCRIPTION: `<p>Pegasus, the Computer Science Department of ST PAUL'S COLLEGE, is renowned for its 
+    commitment to excellence and innovation in technology education. The department 
+    frequently hosts guest lectures by esteemed industry professionals and academics, offering 
+    students insights into the latest technological advancements and career guidance. Numerous 
+    workshops on cutting-edge topics like artificial intelligence, cybersecurity, and data science 
+    are organized to enhance practical skills. The annual intra-department fest, Oracle, is a 
+    highlight, featuring coding contests, technical quizzes, and project exhibitions that foster 
+    competition and collaboration. Pegasus also hosts an annual hackathon, promoting creativity 
+    and teamwork in developing real-world solutions. Additionally, industrial visits to leading 
+    tech companies provide students with firsthand industry experience, bridging the gap 
+    between academic learning and professional practice.</p>`,
   },
   {
     cssClassName: "loc",
