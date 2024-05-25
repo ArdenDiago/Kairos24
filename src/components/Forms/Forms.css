@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
 
+:root {
+  --spaceMargin: 30px;
+  --spacePadding: 10px;
+}
+
 input {
   caret-color: red;
 }
 
 .myform {
-  margin: 0;
+  padding-top: var(--spaceMargin);
+  padding-bottom: var(--spaceMargin);
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(to right, blue, purple);
+  height: max-content;
   display: flex;
   align-items: center;
   text-align: center;
@@ -19,13 +24,17 @@ input {
 }
 
 .form-container {
-  position: relative;
   width: 500px;
-  height: 600px;
+  height: max-content;
   border-radius: 20px;
   padding: 40px;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value to make it slightly more transparent */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Adjust the alpha value to make it slightly more transparent */
 }
 
 .event-logo {
@@ -54,7 +63,9 @@ input {
 
 label,
 input,
-button {
+button,
+select,
+option {
   display: block;
   width: 100%;
   padding: 0;
@@ -70,12 +81,13 @@ label {
 label:nth-of-type(2) {
   margin-top: 12px;
 }
-
 input::placeholder {
   color: gray;
 }
 
-input {
+input,
+select,
+option {
   background: #ecf0f3;
   padding: 10px;
   padding-left: 20px;
@@ -83,6 +95,11 @@ input {
   font-size: 14px;
   border-radius: 50px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+option {
+  background-color: red;
+  border-radius: 50px;
 }
 
 button {
@@ -119,16 +136,39 @@ button:active {
   background-color: blue;
 }
 
-
-
-
-
 #video-bg {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  /* top: -3.1vmax; */
   left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Maintain video aspect ratio and cover entire form-container */
+  height:60em;
+  object-fit: fill;
   z-index: -1;
+}
+
+.snackBar {
+  background-color: rgb(119, 119, 119);
+  color: white;
+  border-radius: 20px;
+  margin-left: var(--spaceMargin);
+  margin-right: var(--spaceMargin);
+}
+.snackBar > div > p {
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+}
+
+.snackBar > div > p > span {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.snackBar > div > p > span > img {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 20px; /* Adjust the size of the SVG icon */
+  height: 20px; /* Ensuring the height is the same as width */
+}
+
+.section-info {
+  position: relative;
 }

@@ -1,8 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .column {
   align-items: center;
   width: 33.3%;
@@ -11,7 +6,7 @@ body {
 }
 
 .about {
-  background-color: rgba(51, 103, 226, 0.733);
+  background-color: rgb(51, 104, 226);
 }
 
 .card {
