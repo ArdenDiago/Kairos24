@@ -161,7 +161,7 @@ button:active {
 /* Tablet */
 @media (max-width: 768px) {
   .box {
-    width: 470%;
+    width: 200%;
     padding: 100px;
   }
   .eventHeadings {
@@ -172,7 +172,7 @@ button:active {
 /* Mobile devices */
 @media (max-width: 480px) {
   .box {
-    width: 500%;
+    width: 150%;
     padding: 80px;
     margin-bottom: 10px;
   }
