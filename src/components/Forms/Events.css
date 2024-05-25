@@ -1,3 +1,7 @@
+:root {
+  --marginDiv: 10px;
+}
+
 .box {
   margin: 4%;
   width: 90%;
@@ -150,4 +154,15 @@ button:active {
   background-position:center;
   display: flex;
   
+}
+
+@media screen and  (min-width: 320px) {
+    .box {
+      margin-right: var(--marginDiv);
+      margin-left: var(--marginDiv);
+      width: 82%;
+    }
+    .question {
+      grid-template-columns: auto auto;
+    }
 }
