@@ -4,7 +4,7 @@ export default function AboutUsCard({ cssClassName, title, DESCRIPTION }) {
       <div className="column">
         <div className="card">
           <div className="container">
-            <h2 className={cssClassName}>{title}</h2>
+            <h3 className={cssClassName}>{title}</h3>
             <br />
             <div dangerouslySetInnerHTML={{__html: DESCRIPTION}}></div>
           </div>
