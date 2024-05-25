@@ -3,7 +3,6 @@ import "./Events.css";
 
 import video from "./FormVideo.mp4";
 import video2 from "./FormVideo2.mp4";
-
 import svgFile from "./errorImg.svg";
 
 import NamesAndPhoneNo from "./NamesAndPhoneNo";
@@ -12,7 +11,6 @@ import Event from "./Events";
 import { useState } from "react";
 
 export default function Forms() {
-
   // Participants Info
   const [name, setName] = useState("");
   const [phoneNO, setPhoneNO] = useState("");
@@ -36,12 +34,10 @@ export default function Forms() {
   const [checkAMONG_US, setAMONG_US] = useState(false);
   const [checkNEED_FOR_SPEED, setNEED_FOR_SPEED] = useState(false);
   const [checkREVERSE_CHARADES, setREVERSE_CHARADES] = useState(false);
-  
+
   // Cultural Events
   const [checkGROUP_DANCE, setGROUP_DANCE] = useState(false);
   const [checkFASHION_SHOW, setFASHION_SHOW] = useState(false);
-
-
 
   function checker() {
     const errors = [];
@@ -70,9 +66,6 @@ export default function Forms() {
   return (
     <>
       <section className="section-info">
-        <video autoPlay muted loop id="video-bg">
-          <source src={video2} type="video/mp4" />
-        </video>
         <section className="myform">
           <div className="form-container">
             <div className="event-logo"></div>
@@ -102,10 +95,13 @@ export default function Forms() {
                 onValueChange={(e) => setCollegeName(e.target.value)}
                 ability={isReadOnly}
               />
-              <label>Select your Option</label>
-              <select onClick={(e) => console.log(e)}>
+              <label className="syo">Select your Option </label>
+              <select className="syo" onClick={(e) => console.log(e)}>
+                <option value="" disabled>
+                  Select Registration Type
+                </option>
                 <option>Group Registration</option>
-                <option>Individuals</option>
+                <option>Individual</option>
               </select>
               <br />
               <div className="snackBar">
@@ -113,14 +109,14 @@ export default function Forms() {
                   {logError.map((err, index) => (
                     <p key={index}>
                       <span>
-                        <img src={svgFile} />
+                        <img src={svgFile} alt="Error Icon" />
                       </span>
                       {err}
                     </p>
                   ))}
                 </div>
               </div>
-              <button type="submit" onClick={checker}>
+              <button className="fb" type="submit" onClick={checker}>
                 {isReadOnly ? "Edit" : "Next"}
               </button>
             </div>
@@ -128,27 +124,31 @@ export default function Forms() {
         </section>
       </section>
 
-      <section className="section-info">
+      <section className="section-info group-registration">
         <video autoPlay muted loop id="video-bg">
           <source src={video2} type="video/mp4" />
         </video>
-        <h2 className="main-title">GROUP REGISTRATION</h2>
-        <div className="container-form">
-          <Event
-            category="TECHNICAL EVENTS"
-            eventID={["Coding", "IT QUIZ","IT MANAGER","TREASURE HUNT"]}
-            handleChange={(e) => checkboxActive(e)}
-          />
-          <Event
-            category="GAMING EVENTS"
-            eventID={["BGMI", "AMONG US","NEED FOR SPEED","REVERSE CHARADES"]}
-            handleChange={(e) => checkboxActive(e)}
-          />
-          <Event
-            category="CULTURAL EVENTS"
-            eventID={["GROUP DANCE", "FASHION SHOW"]}
-            handleChange={(e) => checkboxActive(e)}
-          />
+        <div className="g2">
+          <section className="gt">
+            <h2 className="main-title">GROUP REGISTRATION</h2>
+            <div className="container-form">
+              <Event
+                category="TECHNICAL EVENTS"
+                eventID={["Coding", "IT QUIZ", "IT MANAGER", "TREASURE HUNT"]}
+                handleChange={(e) => checkboxActive(e)}
+              />
+              <Event
+                category="GAMING EVENTS"
+                eventID={["BGMI", "AMONG US", "NEED FOR SPEED", "REVERSE CHARADES"]}
+                handleChange={(e) => checkboxActive(e)}
+              />
+              <Event
+                category="CULTURAL EVENTS"
+                eventID={["GROUP DANCE", "FASHION SHOW"]}
+                handleChange={(e) => checkboxActive(e)}
+              />
+            </div>
+          </section>
         </div>
       </section>
     </>

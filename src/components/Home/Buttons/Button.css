@@ -1,97 +1,98 @@
-.button {
+.buttonhome {
   all: unset;
   display: flex;
   align-items: center;
+  justify-content: center; /* Center the button horizontally */
   position: relative;
-  padding: 0.6em 2em;
+  padding: 0.5em 1.5em;
   border: rgb(134, 10, 10) solid 0.15em;
   border-radius: 0.25em;
   color: rgb(12, 223, 255);
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 600;
   cursor: pointer;
   overflow: hidden;
-  transition: border 300ms, color 300ms;
+  transition: border 500ms, color 500ms, background 500ms;
   user-select: none;
+  margin-top: -0.5em; /* Adjusted margin to move the button higher */
 }
 
-.button p {
+.buttonhome p {
   z-index: 1;
 }
 
-.button:hover {
+.buttonhome:hover {
   color: #212121;
+  transition: color 800ms;
 }
 
-.button:active {
+.buttonhome:active {
   border-color: rgb(240, 38, 173);
+  transition: border-color 800ms;
 }
 
-.button::after,
-.button::before {
+.buttonhome::after,
+.buttonhome::before {
   content: "";
   position: absolute;
-  width: 9em;
+  width: 5em;
   aspect-ratio: 1;
   background: rgb(250, 129, 0);
   opacity: 50%;
   border-radius: 50%;
-  transition: transform 500ms, background 300ms;
+  transition: transform 1000ms, background 500ms;
 }
 
-.button::before {
+.buttonhome::before {
   left: 0;
-  transform: translateX(-8em);
+  transform: translateX(-4em);
 }
 
-.button::after {
+.buttonhome::after {
   right: 0;
-  transform: translateX(8em);
+  transform: translateX(4em);
 }
 
-.button:hover:before {
-  transform: translateX(-1em);
+.buttonhome:hover:before {
+  transform: translateX(-0.5em);
+  transition: transform 800ms;
 }
 
-.button:hover:after {
-  transform: translateX(1em);
+.buttonhome:hover:after {
+  transform: translateX(0.5em);
+  transition: transform 800ms;
 }
 
-.button:active:before,
-.button:active:after {
+.buttonhome:active:before,
+.buttonhome:active:after {
   background: rgb(8, 14, 194);
-}
-@media screen and (max-width: 320px) {
-  .button {
-    padding: 0.1px 30px;
-    font-size: 1em;
-  }
+  transition: background 800ms;
 }
 
-@media screen and (min-width: 321px) and (max-width: 375px) {
-  .button {
-    padding: 0.1px 30px;
+@media screen and (max-width: 768px) {
+  .buttonhome {
+    padding: 0.4em 1.2em;
     font-size: 1em;
   }
-}
 
-@media screen and (min-width: 376px) and (max-width: 425px) {
-  .button {
-    padding: 0.1px 30px;
-    font-size: 1em;
+  .buttonhome::after,
+  .buttonhome::before {
+    width: 4em;
   }
-}
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
-  .button {
-    padding: 0.1px 30px;
-    font-size: 1em;
+  .buttonhome::before {
+    transform: translateX(-3em);
   }
-}
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .button {
-    padding: 0.1px 30px;
-    font-size: 1em;
+  .buttonhome::after {
+    transform: translateX(3em);
+  }
+
+  .buttonhome:hover:before {
+    transform: translateX(-0.3em);
+  }
+
+  .buttonhome:hover:after {
+    transform: translateX(0.3em);
   }
 }
