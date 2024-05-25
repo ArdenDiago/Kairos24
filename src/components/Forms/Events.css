@@ -7,7 +7,7 @@
 }
 
 .box {
-  width: 900px;
+  width: 700px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -157,3 +157,28 @@ button:active {
   display: flex;
   
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  .box {
+    width: 470%;
+    padding: 100px;
+  }
+  .eventHeadings {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .box {
+    width: 500%;
+    padding: 80px;
+    margin-bottom: 10px;
+  }
+  .eventheadings{
+    font-size: 16px;
+    
+  }
+}
+
