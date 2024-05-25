@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
 
-:root {
-  --spaceMargin: 30px;
-  --spacePadding: 10px;
-}
-
 input {
   caret-color: red;
 }
@@ -24,7 +19,8 @@ input {
 }
 
 .form-container {
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   height: max-content;
   border-radius: 20px;
   padding: 40px;
@@ -57,7 +53,7 @@ input {
 }
 
 .inputs {
-  text-align: left;
+  text-align: center;
   margin-top: 30px;
 }
 
@@ -72,6 +68,8 @@ option {
   border: none;
   outline: none;
   box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 label {
@@ -94,6 +92,7 @@ option {
   height: 50px;
   font-size: 14px;
   border-radius: 50px;
+  text-align: center;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 
@@ -102,7 +101,7 @@ option {
   border-radius: 50px;
 }
 
-button {
+.fb {
   padding: 17px 40px;
   color: white;
   border-radius: 50px;
@@ -114,12 +113,13 @@ button {
   text-transform: uppercase;
   font-size: 15px;
   transition: all 0.5s ease;
+  text-align: center;
 }
 
 button:hover {
   letter-spacing: 3px;
   background-color: hsl(261deg 80% 48%);
-  color: hsl(0, 0%, 100%);
+  color: hsl(0, 75%, 75%);
   box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
 }
 
@@ -134,16 +134,7 @@ button:active {
 
 .inputs > button {
   background-color: blue;
-}
-
-#video-bg {
-  position: absolute;
-  /* top: -3.1vmax; */
-  left: 0;
-  width: 100%;
-  height:60em;
-  object-fit: fill;
-  z-index: -1;
+  text-align: center;
 }
 
 .snackBar {
@@ -153,6 +144,7 @@ button:active {
   margin-left: var(--spaceMargin);
   margin-right: var(--spaceMargin);
 }
+
 .snackBar > div > p {
   display: flex;
   align-items: center; /* Align icon and text vertically */
@@ -171,4 +163,114 @@ button:active {
 
 .section-info {
   position: relative;
+}
+
+.inputs {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Align children in a column */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  text-align: center;
+  margin-top: 60px;
+  width: 100%; /* Ensure the container takes full width */
+}
+
+.inputs > button {
+  background-color: blue;
+  text-align: center;
+  width: auto; /* Adjust width to fit content */
+  padding: 20px 100px; /* Add padding for better appearance */
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+input,
+.syo {
+  margin-top: 10px;
+}
+
+/* Updated CSS for the dropdown */
+select.syo {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #555;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+select.syo:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.6);
+}
+
+/* Style for dropdown options */
+option {
+  background-color: #fff;
+  color: #555;
+}
+
+/* Style for placeholder option */
+option[disabled]:first-of-type {
+  color: #888;
+}
+
+#video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.group-registration #video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.main-title {
+  margin-top: 70px;
+}
+
+.container-form {
+  width: 90%;
+  max-width: 500px;
+  height: max-content;
+  border-radius: 20px;
+  padding: 40px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Adjust the alpha value to make it slightly more transparent */
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .fb {
+    padding: 10px 20px; /* Adjust button padding */
+  }
+
+  .inputs > button {
+    padding: 10px 20px; /* Adjust button padding */
+  }
 }

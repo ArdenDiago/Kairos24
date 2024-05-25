@@ -1,6 +1,8 @@
 import Header from "./components/Home/Header/Header";
-import Events from "./components/Events/Events";
-// import AboutUs from "./components/AboutUs/AboutUs";
+
+//import Events from "./components/Events/Events";
+import AboutUs from "./components/AboutUs/AboutUs";
+
 import Forms from "./components/Forms/Forms";
 
 function App() {

@@ -116,7 +116,7 @@ button:active {
   margin: calc(var(--s) / 2);
   display: grid;
   cursor: pointer;
-  background-color: #1c279c;
+  background-color: #d38b1e;
   box-sizing: content-box;
   overflow: hidden;
   transition: .3s .1s;
@@ -139,7 +139,7 @@ button:active {
 }
 
 .event-list:checked {
-  background-color: #8364ff;
+  background-color: #6cff64;
 }
 
 .event-list:checked:before {
@@ -150,4 +150,10 @@ button:active {
 
 .left {
   margin-left: 10px;
+}
+.evec{
+  background: url(FormVideo2.mp4);
+  background-position:center;
+  display: flex;
+  
 }
