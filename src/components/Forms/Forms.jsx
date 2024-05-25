@@ -131,7 +131,6 @@ export default function Forms() {
         <div className="g2">
           <section className="gt">
             <h2 className="main-title">GROUP REGISTRATION</h2>
-            <div className="container-form">
               <Event
                 category="TECHNICAL EVENTS"
                 eventID={["Coding", "IT QUIZ", "IT MANAGER", "TREASURE HUNT"]}
@@ -147,7 +146,6 @@ export default function Forms() {
                 eventID={["GROUP DANCE", "FASHION SHOW"]}
                 handleChange={(e) => checkboxActive(e)}
               />
-            </div>
           </section>
         </div>
       </section>
