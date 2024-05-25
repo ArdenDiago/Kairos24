@@ -148,15 +148,7 @@ button:active {
   --_i: 1;
 }
 
-.left {
-  margin-left: 10px;
-}
-.evec{
-  background: url(FormVideo2.mp4);
-  background-position:center;
-  display: flex;
-  
-}
+
 
 /* Tablet */
 @media (max-width: 768px) {
@@ -172,7 +164,7 @@ button:active {
 /* Mobile devices */
 @media (max-width: 480px) {
   .box {
-    width: 150%;
+    width: 500%;
     padding: 80px;
     margin-bottom: 10px;
   }
