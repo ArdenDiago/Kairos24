@@ -16,6 +16,7 @@ input {
   place-items: center;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
+  margin-top: 50px;
 }
 
 .form-container {
@@ -73,7 +74,7 @@ option {
 }
 
 label {
-  margin-bottom: 4px;
+  margin-bottom: 20px;
 }
 
 label:nth-of-type(2) {
@@ -261,5 +262,43 @@ option[disabled]:first-of-type {
     padding: 10px 20px; /* Adjust button padding */
   }
  
+}
+label {
+  margin-bottom: 20px;
+}
+
+/* Small Mobile Devices (max-width: 320px) */
+@media screen and (max-width: 320px) {
+  label {
+    margin-bottom: 10px;
+    font-size: 8px;
+    margin-top: 5px;
+  }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  label {
+    margin-bottom: 18px;
+  }
+}
+
+
+@media screen and (min-width: 901px) and (max-width: 1440px) {
+  label {
+    margin-bottom: 20px; 
+  }
+}
+
+/* Monitors (1441px and above) */
+@media screen and (min-width: 1441px) {
+  label {
+    margin-bottom: 25px; /* Increase margin for large screens */
+  }
 }
 
