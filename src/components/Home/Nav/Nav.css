@@ -7,11 +7,11 @@
 }
 .master-nav {
   padding: 10px;
-  /* background-color: rgba(71, 71, 71, 0.637); */
+  /*background-color: rgba(71, 71, 71, 0.637); */
   border-radius: 50px;
 }
 .nav-links {
-  display: flex;
+  display: grid;
   width: 100%;
 }
 .nav-links > div {
