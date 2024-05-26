@@ -165,8 +165,4 @@ button:active {
     .question {
       grid-template-columns: auto auto;
     }
-    .event-list {
-      height: 20px;
-    }
-
 }
