@@ -65,6 +65,7 @@ export default function Forms() {
   return (
     <>
       <form
+
         id="myForm"
         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd3afF6ukRTOUg2oHHJSGGaEVGqOCKfl_TNjvzolFH0dpOfHg/formResponse"
         method="POST"
@@ -102,14 +103,7 @@ export default function Forms() {
                   onValueChange={(e) => setCollegeName(e.target.value)}
                   ability={isReadOnly}
                 />
-                <label className="syo">Select your Option </label>
-                <select className="syo" onClick={(e) => console.log(e)}>
-                  <option value="" disabled>
-                    Select Registration Type
-                  </option>
-                  <option>Group Registration</option>
-                  <option>Individual</option>
-                </select>
+                
                 <br />
                 <div className="snackBar">
                   <div>
@@ -164,7 +158,12 @@ export default function Forms() {
                     category="CULTURAL EVENTS"
                     eventID={["GROUP DANCE", "FASHION SHOW"]}
                     handleChange={(e) => checkboxActive(e)}
+                    
                   />
+                  <button className="sf" type="submit" onClick={checker}>
+                    Submit
+                </button>
+                  
                 </div>
               </section>
             </div>

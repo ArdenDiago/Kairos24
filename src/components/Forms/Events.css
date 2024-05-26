@@ -291,7 +291,7 @@ button:active {
 /* Monitors (1441px and above) */
 @media screen and (min-width: 1441px) {
   .event-list {
-    --s: 40px;
+    --s: 50px;
     height: calc(var(--s) + var(--s) / 5);
     margin: calc(var(--s) / 2);
   }
