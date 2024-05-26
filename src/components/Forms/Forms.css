@@ -16,7 +16,8 @@ input {
   place-items: center;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
-  margin-top: 50px;
+ 
+  background: url(FormVideo.mp4);
 }
 
 .form-container {
@@ -234,8 +235,8 @@ option[disabled]:first-of-type {
 
 
 
-.main-title {
-  margin-top: 40px;
+.main-title{
+  margin: 0;
 }
 
 .container-form {
@@ -247,6 +248,117 @@ option[disabled]:first-of-type {
   margin: auto;
   box-sizing: border-box;
 
+}
+.sf {
+  font-size: 15px; /* Adjust the font size based on viewport width */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Add cursor pointer */
+  transition: background-color 0.3s; 
+  padding-right: 200px;
+
+}
+.sf:hover {
+  background-color: #0056b3;
+ /* Glow effect */
+  color: white;
+   /* Change background color on hover */
+}
+.myform{
+  background-image: url("https://images.app.goo.gl/CbuQPWSgXChgdM4y6");
+}
+.form-container{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0;
+}
+.gt, .main-title{
+  background-color: black;
+}
+
+
+
+
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  label {
+    margin-bottom: 18px;
+  }
+}
+
+
+@media screen and (min-width: 901px) and (max-width: 1440px) {
+  label {
+    margin-bottom: 20px; 
+  }
+}
+
+
+/* Monitors (1441px and above) */
+@media screen and (min-width: 1441px) {
+  label {
+    margin-bottom: 25px; /* Increase margin for large screens */
+  }
+}
+
+
+
+.sf {
+  padding: 17px 40px;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: rgb(61, 104, 223);
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  text-align: center;
+  padding-right: 130px;
+  padding-left: 55px;
+}
+
+button:hover {
+  letter-spacing: 2px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 75%, 75%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.inputs > button {
+  background-color: blue;
+  text-align: center;
+}
+.inputs {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Align children in a column */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  text-align: center;
+  margin-top: 60px;
+  width: 100%; /* Ensure the container takes full width */
+}
+
+.inputs > button {
+  background-color: blue;
+  text-align: center;
+  width: auto; /* Adjust width to fit content */
+  padding: 20px 100px; /* Add padding for better appearance */
+  margin-left: 20px;
+  margin-top: 15px;
 }
 
 @media (max-width: 600px) {
@@ -276,43 +388,8 @@ label {
   }
 }
 
-.sf {
-  font-size: 15px; /* Adjust the font size based on viewport width */
-  border-radius: 8px; /* Add border radius for rounded corners */
-  background-color: #007bff; /* Button background color */
-  color: white; /* Text color */
-  border: none; /* Remove button border */
-  cursor: pointer; /* Add cursor pointer */
-  transition: background-color 0.3s; 
-  padding-right: 100px;
-}
-
-.sf:hover {
-  background-color: #0056b3; /* Change background color on hover */
-}
 
 
 
 
-
-
-@media screen and (min-width: 601px) and (max-width: 900px) {
-  label {
-    margin-bottom: 18px;
-  }
-}
-
-
-@media screen and (min-width: 901px) and (max-width: 1440px) {
-  label {
-    margin-bottom: 20px; 
-  }
-}
-
-/* Monitors (1441px and above) */
-@media screen and (min-width: 1441px) {
-  label {
-    margin-bottom: 25px; /* Increase margin for large screens */
-  }
-}
 

@@ -129,7 +129,7 @@ export default function Forms() {
           <div className="vid">
             <div className="g2">
               <section className="gt">
-                <h2 className="main-title">GROUP REGISTRATION</h2>
+                <h2 className="main-title">EVENT REGISTRATION</h2>
                 <div className="container-form">
                   <Event
                     className="te"
