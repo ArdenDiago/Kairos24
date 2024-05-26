@@ -9,6 +9,10 @@ import Event from "./Events";
 import { useState } from "react";
 
 export default function Forms() {
+  const NameId = 'entry.1868876427';
+  const formData = new FormData();
+  // formData.append(NameId, form.name);
+  console.log(formData);
   // Participants Info
   const [name, setName] = useState("");
   const [phoneNO, setPhoneNO] = useState("");
@@ -22,20 +26,20 @@ export default function Forms() {
 
   // Event Updator
   // Technical Events
-  const [checkCoding, setCoding] = useState(false);
-  const [checkIT_QUIZ, setIT_QUIZ] = useState(false);
-  const [checkIT_MANAGER, setIT_MANAGER] = useState(false);
-  const [checkTREASURE_HUNT, setTREASURE_HUNT] = useState(false);
+  const [Coding, setCoding] = useState(false);
+  const [IT_QUIZ, setIT_QUIZ] = useState(false);
+  const [IT_MANAGER, setIT_MANAGER] = useState(false);
+  const [TREASURE_HUNT, setTREASURE_HUNT] = useState(false);
 
   // Gaming Events
-  const [checkBGMI, setBGMI] = useState(false);
-  const [checkAMONG_US, setAMONG_US] = useState(false);
-  const [checkNEED_FOR_SPEED, setNEED_FOR_SPEED] = useState(false);
-  const [checkREVERSE_CHARADES, setREVERSE_CHARADES] = useState(false);
+  const [BGMI, setBGMI] = useState(false);
+  const [AMONG_US, setAMONG_US] = useState(false);
+  const [NEED_FOR_SPEED, setNEED_FOR_SPEED] = useState(false);
+  const [REVERSE_CHARADES, setREVERSE_CHARADES] = useState(false);
 
   // Cultural Events
-  const [checkGROUP_DANCE, setGROUP_DANCE] = useState(false);
-  const [checkFASHION_SHOW, setFASHION_SHOW] = useState(false);
+  const [GROUP_DANCE, setGROUP_DANCE] = useState(false);
+  const [FASHION_SHOW, setFASHION_SHOW] = useState(false);
 
   function checker(e) {
     e.preventDefault();
@@ -62,11 +66,31 @@ export default function Forms() {
     console.log(e.target.id);
   }
 
+  function checkerSubmit() {
+    // Database
+    axios.post(
+      "https://sheet.best/api/sheets/c664d3e1-1d3e-41a0-8037-fdf702acb2f1",
+      {
+        name,
+        phoneNO,
+        collegeName,
+        Coding,
+        IT_QUIZ,
+        IT_MANAGER,
+        TREASURE_HUNT,
+        BGMI,
+        AMONG_US,
+        NEED_FOR_SPEED,
+        REVERSE_CHARADES,
+        GROUP_DANCE,
+        FASHION_SHOW
+      }
+    );
+  }
+
   return (
     <>
       <form
-
-        id="myForm"
         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd3afF6ukRTOUg2oHHJSGGaEVGqOCKfl_TNjvzolFH0dpOfHg/formResponse"
         method="POST"
       >
@@ -103,7 +127,7 @@ export default function Forms() {
                   onValueChange={(e) => setCollegeName(e.target.value)}
                   ability={isReadOnly}
                 />
-                
+
                 <br />
                 <div className="snackBar">
                   <div>
@@ -129,7 +153,7 @@ export default function Forms() {
           <div className="vid">
             <div className="g2">
               <section className="gt">
-                <h2 className="main-title">GROUP REGISTRATION</h2>
+                <h2 className="main-title">EVENT REGISTRATION</h2>
                 <div className="container-form">
                   <Event
                     className="te"
@@ -158,12 +182,14 @@ export default function Forms() {
                     category="CULTURAL EVENTS"
                     eventID={["GROUP DANCE", "FASHION SHOW"]}
                     handleChange={(e) => checkboxActive(e)}
-                    
                   />
-                  <button className="sf" type="submit" onClick={checker}>
+                  <button
+                    className="sf"
+                    type="submit"
+                    onClick={() => checkerSubmit()}
+                  >
                     Submit
-                </button>
-                  
+                  </button>
                 </div>
               </section>
             </div>
