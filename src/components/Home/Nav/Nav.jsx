@@ -35,7 +35,7 @@ export default function Nav() {
                 <a href="#">Contact</a>
               </li>
               <li className="nav-item">
-                <a href="#">Brouchere</a>
+                <a href="#">Brochure</a>
               </li>
             </ul>
           </nav>
