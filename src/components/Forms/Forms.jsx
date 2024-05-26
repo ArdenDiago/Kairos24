@@ -125,28 +125,30 @@ export default function Forms() {
       </section>
 
       <section className="section-info group-registration">
-        <video autoPlay muted loop id="video-bg">
-          <source src={video2} type="video/mp4" />
-        </video>
+        
+        <div className="vid">
         <div className="g2">
           <section className="gt">
             <h2 className="main-title">GROUP REGISTRATION</h2>
-              <Event
+            <div className="container-form">
+              <Event className="te" 
                 category="TECHNICAL EVENTS"
                 eventID={["Coding", "IT QUIZ", "IT MANAGER", "TREASURE HUNT"]}
                 handleChange={(e) => checkboxActive(e)}
               />
-              <Event
+              <Event className="ge"
                 category="GAMING EVENTS"
                 eventID={["BGMI", "AMONG US", "NEED FOR SPEED", "REVERSE CHARADES"]}
                 handleChange={(e) => checkboxActive(e)}
               />
-              <Event
+              <Event className="ce"
                 category="CULTURAL EVENTS"
                 eventID={["GROUP DANCE", "FASHION SHOW"]}
                 handleChange={(e) => checkboxActive(e)}
               />
+            </div>
           </section>
+          </div>
         </div>
       </section>
     </>

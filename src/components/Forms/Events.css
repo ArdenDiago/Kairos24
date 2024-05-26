@@ -1,15 +1,18 @@
-:root {
-  --marginDiv: 10px;
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .box {
-  margin: 4%;
-  width: 90%;
+  width: 700px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: rgba(250, 234, 234, 0.904);
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 4px 6px rgba(136, 129, 129, 0.1);
   border-radius: 10px;
   margin-bottom: 20px;
@@ -25,8 +28,7 @@
 }
 
 .question {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -146,23 +148,29 @@ button:active {
   --_i: 1;
 }
 
-.left {
-  margin-left: 10px;
-}
-.evec{
-  background: url(FormVideo2.mp4);
-  background-position:center;
-  display: flex;
-  
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .box {
+    width: 200%;
+    padding: 100px;
+  }
+  .eventHeadings {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
 }
 
-@media screen and  (min-width: 320px) {
-    .box {
-      margin-right: var(--marginDiv);
-      margin-left: var(--marginDiv);
-      width: 82%;
-    }
-    .question {
-      grid-template-columns: auto auto;
-    }
+/* Mobile devices */
+@media (max-width: 480px) {
+  .box {
+    width: 500%;
+    padding: 80px;
+    margin-bottom: 10px;
+  }
+  .eventheadings{
+    font-size: 16px;
+    
+  }
 }
+
