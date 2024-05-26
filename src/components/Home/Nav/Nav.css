@@ -7,11 +7,11 @@
 }
 .master-nav {
   padding: 10px;
-  /* background-color: rgba(71, 71, 71, 0.637); */
+  /*background-color: rgba(71, 71, 71, 0.637); */
   border-radius: 50px;
 }
 .nav-links {
-  display: flex;
+  display: block;
   width: 100%;
 }
 .nav-links > div {
@@ -57,7 +57,7 @@ a:hover {
 /* Media */
 @media screen and (max-width: 320px) {
   .master-nav {
-    background-color: rgba(0, 0, 0, 0.822);
+    
     margin: 2px;
   }
   .Header-Bar {
@@ -69,9 +69,7 @@ a:hover {
   .Header-Bar > div > img {
     width: 100px;
   }
-  .nav-links {
-    visibility: hidden;
-  }
+  
 }
 
 @media screen and (min-width: 321px) and (max-width: 375px) {
@@ -88,9 +86,7 @@ a:hover {
   .Header-Bar > div > img {
     width: 100px;
   }
-  .nav-links {
-    visibility: hidden;
-  }
+  
 }
 
 @media screen and (min-width:376px) and (max-width: 425px) {
@@ -107,9 +103,7 @@ a:hover {
   .Header-Bar > div > img {
     width: 100px;
   }
-  .nav-links {
-    visibility: hidden;
-  }
+  
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
@@ -134,9 +128,7 @@ a:hover {
   a { 
     font-size: 20px;
   }
-  .nav-links > div {
-    padding-bottom: 5px;
-  }
+ 
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
@@ -149,9 +141,7 @@ a:hover {
   a { 
     font-size: 20px;
   }
-  .nav-links > div {
-    padding-bottom: 5px;
-  }
+ 
 }
 
 @media screen and (min-width: 1441px) and (max-width: 2560px) {
@@ -164,7 +154,5 @@ a:hover {
   a { 
     font-size: 30px;
   }
-  .nav-links > div {
-    padding-bottom: 5px;
-  }
+
 }
