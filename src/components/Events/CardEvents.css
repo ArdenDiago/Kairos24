@@ -89,6 +89,6 @@ grid-template-columns: auto auto;
     grid-template-columns: auto;
   }
   :root {
-    --CardSize: 350px
+    --CardSize: 340px
   }
 }
