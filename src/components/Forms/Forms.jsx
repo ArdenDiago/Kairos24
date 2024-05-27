@@ -99,71 +99,69 @@ export default function Forms() {
 
   return (
     <>
-      <form
-        id="myForm"
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd3afF6ukRTOUg2oHHJSGGaEVGqOCKfl_TNjvzolFH0dpOfHg/formResponse"
-        method="POST"
-      >
-        <section className="section-info">
-          <section className="myform">
-            <div className="form-container">
-              <div className="event-logo"></div>
-              <div className="event-title">KAIROS 24</div>
-              <div className="inputs">
-                <NamesAndPhoneNo
-                  text="Name"
-                  textType="text"
-                  inputId="name"
-                  inputName="entry.1868876427"
-                  textPlaceHolder="Name"
-                  onValueChange={(e) => setName(e.target.value)}
-                  ability={isReadOnly}
-                />
-                <NamesAndPhoneNo
-                  text="Phone No"
-                  textType="tel"
-                  inputId="phoneNo"
-                  inputName="entry.1706755647"
-                  textPlaceHolder="Phone No"
-                  onValueChange={(e) => setPhoneNO(e.target.value)}
-                  ability={isReadOnly}
-                />
-                <NamesAndPhoneNo
-                  text="College Name"
-                  textType="text"
-                  inputId="collegeName"
-                  inputName="entry.498382195"
-                  textPlaceHolder="College Name"
-                  onValueChange={(e) => setCollegeName(e.target.value)}
-                  ability={isReadOnly}
-                />
+      <section className="section-info">
+        <section className="myform">
+          <div className="form-container">
+            <div className="event-logo"></div>
+            <div className="event-title">KAIROS 24</div>
+            <div className="inputs">
+              <NamesAndPhoneNo
+                text="Name"
+                textType="text"
+                inputId="name"
+                inputName="entry.1868876427"
+                textPlaceHolder="Name"
+                onValueChange={(e) => setName(e.target.value)}
+                ability={isReadOnly}
+              />
+              <NamesAndPhoneNo
+                text="Phone No"
+                textType="tel"
+                inputId="phoneNo"
+                inputName="entry.1706755647"
+                textPlaceHolder="Phone No"
+                onValueChange={(e) => setPhoneNO(e.target.value)}
+                ability={isReadOnly}
+              />
+              <NamesAndPhoneNo
+                text="College Name"
+                textType="text"
+                inputId="collegeName"
+                inputName="entry.498382195"
+                textPlaceHolder="College Name"
+                onValueChange={(e) => setCollegeName(e.target.value)}
+                ability={isReadOnly}
+              />
 
-                <br />
-                <div className="snackBar">
-                  <div>
-                    {logError.map((err, index) => (
-                      <p key={index}>
-                        <span>
-                          <img src={svgFile} alt="Error Icon" />
-                        </span>
-                        {err}
-                      </p>
-                    ))}
-                  </div>
+              <br />
+              <div className="snackBar">
+                <div>
+                  {logError.map((err, index) => (
+                    <p key={index}>
+                      <span>
+                        <img src={svgFile} alt="Error Icon" />
+                      </span>
+                      {err}
+                    </p>
+                  ))}
+
                 </div>
-                <button className="fb" type="submit" onClick={checker}>
-                  {isReadOnly ? "Edit" : "Next"}
-                </button>
               </div>
+              <button className="fb" type="submit" onClick={checker}>
+                {isReadOnly ? "Edit" : "Next"}
+              </button>
             </div>
-          </section>
+          </div>
         </section>
+      </section>
+      {isReadOnly && (
 
         <section className="section-info group-registration">
           <div className="vid">
             <div className="g2">
               <section className="gt">
-                <h2 className="main-title">GROUP REGISTRATION</h2>
+                <h2 className="main-title">EVENT REGISTRATION</h2>
+
                 <div className="container-form">
                   <Event
                     className="te"
@@ -205,7 +203,8 @@ export default function Forms() {
             </div>
           </div>
         </section>
-      </form>
+      )}
+
     </>
   );
 }
