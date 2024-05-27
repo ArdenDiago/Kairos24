@@ -7,7 +7,7 @@
 }
 
 .box {
-  width: 700px;
+  width: 800px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -38,9 +38,9 @@
 }
 
 button {
-  --glow-color: rgb(217, 176, 255);
-  --glow-spread-color: rgba(191, 123, 255, 0.781);
-  --enhanced-glow-color: rgb(231, 206, 255);
+  --glow-color: rgb(177, 153, 199);
+  --glow-spread-color: rgba(161, 133, 187, 0.781);
+  --enhanced-glow-color: rgb(132, 129, 135);
   --btn-color: rgb(100, 61, 136);
   border: .25em solid var(--glow-color);
   padding: 1em 3em;
@@ -57,6 +57,7 @@ button {
   position: relative;
   transition: all 0.3s;
   margin-left: 45%;
+  padding-right: 100px;
 }
 
 button::after {
@@ -67,7 +68,7 @@ button::after {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--glow-spread-color);
+
   filter: blur(2em);
   opacity: .7;
   transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
@@ -76,8 +77,8 @@ button::after {
 button:hover {
   color: var(--btn-color);
   background-color: var(--glow-color);
-  box-shadow: 0 0 1em .25em var(--glow-color),
-         0 0 4em 2em var(--glow-spread-color),
+  box-shadow: 0 0 1em .10em var(--glow-color),
+         0 0 15em 1em var(--glow-spread-color),
          inset 0 0 .75em .25em var(--glow-color);
 }
 
@@ -300,6 +301,3 @@ button:active {
     padding: calc(var(--s) / 10);
   }
 }
-  
-
-

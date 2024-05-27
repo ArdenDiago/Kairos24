@@ -113,14 +113,8 @@ export default function Forms() {
                   name="entry.1573106079"
                   value={collegeName}
                 />
-                <label className="syo">Select your Option </label>
-                <select className="syo">
-                  <option value="" disabled>
-                    Select Registration Type
-                  </option>
-                  <option>Group Registration</option>
-                  <option>Individual</option>
-                </select>
+                
+                
                 <br />
                 <div className="snackBar">
                   <div>

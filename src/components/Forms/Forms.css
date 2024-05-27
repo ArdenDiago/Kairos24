@@ -21,7 +21,7 @@ input {
 }
 
 .form-container {
-  width: 90%;
+  width: 800px;
   max-width: 500px;
   height: max-content;
   border-radius: 20px;
@@ -35,16 +35,18 @@ input {
   ); /* Adjust the alpha value to make it slightly more transparent */
 }
 
+
 .event-logo {
-  height: 100px;
-  width: 100px;
-  background: url("../../assets/img/KairosLogo/Logo.jpeg") no-repeat center center;
-  background-size: cover;
-  margin: auto;
-  border-radius: 50%;
-  box-sizing: border-box;
-  box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+    height: 150px; /* Increase the height to accommodate the moved image */
+    width: 100px;
+    background: url("../../assets/img/KairosLogo/Logo.jpeg") no-repeat center center;
+    background-size: 100px;
+    background-position: center 40px; /* Adjust this value to move the image down */
+    margin: auto; 
 }
+
+
+
 
 .event-title {
   margin-top: 10px;
@@ -57,7 +59,14 @@ input {
 .inputs {
   text-align: center;
   margin-top: 30px;
+  width: 80%; /* Adjust this value to make it smaller */
+  margin: 50px auto; /* Center the element horizontally */
+  padding: 35px; /* Adjust padding as needed */
+  font-size: 14px; /* Adjust font size as needed */
+  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
+
 
 label,
 input,
@@ -104,7 +113,7 @@ option {
 }
 
 .fb {
-  padding: 17px 40px;
+  padding: 1.4em 4em;
   color: white;
   border-radius: 50px;
   cursor: pointer;
@@ -113,9 +122,11 @@ option {
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 18px;
   transition: all 0.5s ease;
   text-align: center;
+  margin-left: calc(50% -4em);
+  
 }
 
 button:hover {
@@ -186,31 +197,9 @@ button:active {
   margin-top: 15px;
 }
 
-input,
-.syo {
-  margin-top: 10px;
-}
 
-/* Updated CSS for the dropdown */
-select.syo {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 16px;
-  color: #555;
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
 
-select.syo:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.6);
-}
+
 
 /* Style for dropdown options */
 option {
@@ -364,7 +353,8 @@ button:active {
 
 @media (max-width: 600px) {
   .form-container {
-    padding: 20px; /* Reduce padding on smaller screens */
+    padding: 0px; 
+    width: 250px;
   }
 
   .fb {
@@ -388,9 +378,3 @@ label {
     margin-top: 5px;
   }
 }
-
-
-
-
-
-
