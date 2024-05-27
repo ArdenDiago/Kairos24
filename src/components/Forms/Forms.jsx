@@ -248,6 +248,7 @@ export default function Forms() {
                         <a
                           href="https://rzp.io/l/f0MEd2Ld6w"
                           style={{ color: "black" }}
+                          target="blank"
                         >
                           Click To Pay
                         </a>
