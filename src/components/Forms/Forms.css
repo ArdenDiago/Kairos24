@@ -38,7 +38,7 @@ input {
 .event-logo {
   height: 100px;
   width: 100px;
-  background: url("PNG_KAIROS.png") no-repeat center center;
+  background: url("../../assets/img/KairosLogo/Logo.jpeg") no-repeat center center;
   background-size: cover;
   margin: auto;
   border-radius: 50%;
