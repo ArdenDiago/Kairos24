@@ -1,18 +1,16 @@
+import React, { useState, useEffect } from "react";
 import "./Forms.css";
 import "./Events.css";
-
 import svgFile from "./errorImg.svg";
-
 import NamesAndPhoneNo from "./NamesAndPhoneNo";
 import Event from "./Events";
-
-import { useState } from "react";
 
 export default function Forms() {
   // Participants Info
   const [name, setName] = useState("");
   const [phoneNO, setPhoneNO] = useState("");
   const [collegeName, setCollegeName] = useState("");
+  const [totalAmount, setTotalAmount] = useState(0);
 
   // Set ReadOnly
   const [isReadOnly, setReadOnly] = useState(false);
@@ -33,6 +31,19 @@ export default function Forms() {
     group_dance: false,
     fashion_show: false,
   });
+
+  const amountList = {
+    coding: 200,
+    it_quiz: 250,
+    it_manager: 200,
+    treasure_hunt: 400,
+    bgmi: 250,
+    among_us: 100,
+    nfs: 100,
+    reverse_charades: 300,
+    group_dance: 600,
+    fashion_show: 800,
+  };
 
   function checker() {
     const errors = [];
@@ -56,10 +67,21 @@ export default function Forms() {
 
   function checkboxActive(e) {
     const { id, checked } = e.target;
-    setSelectedEvents((prevEvents) => ({
-      ...prevEvents,
-      [id]: checked,
-    }));
+    setSelectedEvents((prevEvents) => {
+      const newEvents = {
+        ...prevEvents,
+        [id]: checked,
+      };
+      calculateTotalAmount(newEvents);
+      return newEvents;
+    });
+  }
+
+  function calculateTotalAmount(events) {
+    const total = Object.keys(events)
+      .filter((event) => events[event])
+      .reduce((sum, event) => sum + amountList[event], 0);
+    setTotalAmount(total);
   }
 
   function handleSubmit(e) {
@@ -69,6 +91,10 @@ export default function Forms() {
       document.getElementById("myForm").submit();
     }
   }
+
+  useEffect(() => {
+    calculateTotalAmount(selectedEvents);
+  }, [selectedEvents]);
 
   return (
     <>
@@ -160,69 +186,78 @@ export default function Forms() {
         </section>
       </section>
 
-      <section className="section-info">
-        <div className="vid">
-          <div className="g2">
-            <section className="gt">
-              <h2 className="main-title">GROUP REGISTRATION</h2>
-              <div className="container-form">
-                <Event
-                  className="te"
-                  category="TECHNICAL EVENTS"
-                  eventID={["coding", "it_quiz", "it_manager", "treasure_hunt"]}
-                  handleChange={checkboxActive}
-                />
-                <Event
-                  className="ge"
-                  category="GAMING EVENTS"
-                  eventID={["bgmi", "among_us", "nfs", "reverse_charades"]}
-                  handleChange={checkboxActive}
-                />
-                <Event
-                  className="ce"
-                  category="CULTURAL EVENTS"
-                  eventID={["group_dance", "fashion_show"]}
-                  handleChange={checkboxActive}
-                />
-                <div
-                  className="box"
-                  style={{
-                    background: "red",
-                    color: "white",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    padding: "10px",
-                    margin: "20px",
-                  }}
-                >
-                  <h2>
-                    Payment will open on the 28<sup>th</sup> of May.
-                  </h2>
-                  <br />
-                  <h5>we are sorry for the inconvenience</h5>
-                  <p>
-                    You can do the registration we will contact you for the
-                    payment.
-                  </p>
-                </div>
-                {/* <div className="box">
-                  <h3 className="paymentCss ">Upload receipt</h3>
-                  <div className="box-width">
-                    <input
-                      className="uploadImg input-css"
-                      type="file"
-                      id="myFile"
-                      name="filename"
-                    />
+      {isReadOnly && (
+        <section className="section-info">
+          <div className="vid">
+            <div className="g2">
+              <section className="gt">
+                <h2 className="main-title">GROUP REGISTRATION</h2>
+                <div className="container-form">
+                  <Event
+                    className="te"
+                    category="TECHNICAL EVENTS"
+                    eventID={[
+                      "coding",
+                      "it_quiz",
+                      "it_manager",
+                      "treasure_hunt",
+                    ]}
+                    handleChange={checkboxActive}
+                  />
+                  <Event
+                    className="ge"
+                    category="GAMING EVENTS"
+                    eventID={["bgmi", "among_us", "nfs", "reverse_charades"]}
+                    handleChange={checkboxActive}
+                  />
+                  <Event
+                    className="ce"
+                    category="CULTURAL EVENTS"
+                    eventID={["group_dance", "fashion_show"]}
+                    handleChange={checkboxActive}
+                  />
+                  <div
+                    className="box"
+                    style={{
+                      background: "red",
+                      color: "white",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      padding: "10px",
+                      margin: "20px",
+                    }}
+                  >
+                    <h2>
+                      Payment will open on the 28<sup>th</sup> of May.
+                    </h2>
+                    <br />
+                    <h5>We are sorry for the inconvenience</h5>
+                    <p>
+                      You can do the registration, we will contact you for the
+                      payment.
+                    </p>
                   </div>
-                </div> */}
-                <button onClick={handleSubmit}>Submit</button>
-              </div>
-            </section>
+                  {/* <div className="box ">
+                    <div className="my-payment">
+                      <h1>Amount: {totalAmount}</h1>
+                      <label>
+                        <a
+                          href="`https://rzp.io/l/f0MEd2Ld6w"
+                          style={{ color: "black" }}
+                        >
+                          Click To Pay
+                        </a>
+                      </label>
+                    </div>
+                  </div> */}
+                  <button onClick={handleSubmit}>Submit</button>
+                </div>
+              </section>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   );
 }

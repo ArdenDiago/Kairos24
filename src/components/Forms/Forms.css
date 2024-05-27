@@ -156,6 +156,7 @@ button:active {
   border-radius: 20px;
   margin-left: var(--spaceMargin);
   margin-right: var(--spaceMargin);
+  padding-right: 9px;
 }
 
 .snackBar > div > p {
@@ -265,11 +266,24 @@ option[disabled]:first-of-type {
   padding: 0;
 }
 .gt, .main-title{
+  padding-top: 50px;
   background-color: black;
 }
 
-
-
+.box {
+  display: block;
+  width: 100%;
+}
+.my-payment {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10%;
+  justify-items: center;
+  width: 100%;
+}
+.my-payment > label > a {
+  top: 10px;
+}
 
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
