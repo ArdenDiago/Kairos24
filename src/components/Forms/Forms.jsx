@@ -9,9 +9,6 @@ import Event from "./Events";
 import { useState } from "react";
 
 export default function Forms() {
-  const NameId = "entry.1868876427";
-  const formData = new FormData();
-
   // Participants Info
   const [name, setName] = useState("");
   const [phoneNO, setPhoneNO] = useState("");
@@ -62,52 +59,42 @@ export default function Forms() {
   }
 
   function checkboxActive(e) {
-    switch (e.target.id) {
+    const valueID = e.target.id;
+    switch (value) {
       case "Coding":
         setCoding((prev) => !prev);
-      case "IT_QUIZ":
+        break;
+      case "IT QUIZ":
         setIT_QUIZ((prev) => !prev);
-      case "IT_MANAGER":
+        break;
+      case "IT MANAGER":
         setIT_MANAGER((prev) => !prev);
-      case "TREASURE_HUNT":
+        break;
+      case "TREASURE HUNT":
         setTREASURE_HUNT((prev) => !prev);
-
+        break;
       case "BGMI":
         setBGMI((prev) => !prev);
-      case "AMONG_US":
+        break;
+      case "AMONG US":
         setAMONG_US((prev) => !prev);
-      case "NEED_FOR_SPEED":
+        break;
+      case "NEED FOR SPEED":
         setNEED_FOR_SPEED((prev) => !prev);
-      case "REVERSE_CHARADES":
+        break;
+      case "REVERSE CHARADES":
         setREVERSE_CHARADES((prev) => !prev);
-
-      case "GROUP_DANCE":
+        break;
+      case "GROUP DANCE":
         setGROUP_DANCE((prev) => !prev);
-      case "FASHION_SHOW":
+        break;
+      case "FASHION SHOW":
         setFASHION_SHOW((prev) => !prev);
+        break;
     }
   }
 
   function checkerSubmit() {
-    // Database
-    axios.post(
-      "https://sheet.best/api/sheets/c664d3e1-1d3e-41a0-8037-fdf702acb2f1",
-      {
-        name,
-        phoneNO,
-        collegeName,
-        Coding,
-        IT_QUIZ,
-        IT_MANAGER,
-        TREASURE_HUNT,
-        BGMI,
-        AMONG_US,
-        NEED_FOR_SPEED,
-        REVERSE_CHARADES,
-        GROUP_DANCE,
-        FASHION_SHOW,
-      }
-    );
   }
 
   return (
@@ -157,6 +144,7 @@ export default function Forms() {
                       {err}
                     </p>
                   ))}
+
                 </div>
               </div>
               <button className="fb" type="submit" onClick={checker}>
@@ -167,11 +155,13 @@ export default function Forms() {
         </section>
       </section>
       {isReadOnly && (
+
         <section className="section-info group-registration">
           <div className="vid">
             <div className="g2">
               <section className="gt">
                 <h2 className="main-title">EVENT REGISTRATION</h2>
+
                 <div className="container-form">
                   <Event
                     className="te"
@@ -214,6 +204,7 @@ export default function Forms() {
           </div>
         </section>
       )}
+
     </>
   );
 }
