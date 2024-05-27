@@ -5,7 +5,9 @@
 .my-Card-section {
   padding: 10px;
   gap: 10px;
-  text-align: center;
+}
+.my-Card-section, .card-size > h1 {
+    text-align: center;
 }
 .my-Card-section > h1 {
     font-size: 50px;
@@ -21,4 +23,23 @@
 .card-size {
   width: var(--CardSize);
   border-color: black 10px;
+}
+.card-body > h3 {
+    text-align: left;
+}
+.time-venus {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.time-venus > div {
+    border: 1px solid white;
+}
+.card-contact {
+    border-top: 1px solid white;
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.card-contact-left {
+    border-right: 1px solid white;
 }

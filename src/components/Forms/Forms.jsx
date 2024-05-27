@@ -197,7 +197,7 @@ export default function Forms() {
                   }}
                 >
                   <h2>
-                    Paymet will open on the 28<sup>th</sup> of May.
+                    Payment will open on the 28<sup>th</sup> of May.
                   </h2>
                   <br />
                   <h5>we are sorry for the inconvenience</h5>
