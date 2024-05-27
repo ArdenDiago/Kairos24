@@ -160,7 +160,7 @@ export default function Forms() {
         </section>
       </section>
 
-      <section className="section-info group-registration">
+      <section className="section-info">
         <div className="vid">
           <div className="g2">
             <section className="gt">

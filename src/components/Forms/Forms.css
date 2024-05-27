@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
 
+:root {
+  --spaceMargin:50px
+}
+
 input {
   caret-color: red;
 }
@@ -265,6 +269,8 @@ option[disabled]:first-of-type {
   padding: 0;
 }
 .gt, .main-title{
+  padding-top: 40px;
+
   background-color: black;
 }
 
