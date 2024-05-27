@@ -206,6 +206,17 @@ export default function Forms() {
                     payment.
                   </p>
                 </div>
+                {/* <div className="box">
+                  <h3 className="paymentCss ">Upload receipt</h3>
+                  <div className="box-width">
+                    <input
+                      className="uploadImg input-css"
+                      type="file"
+                      id="myFile"
+                      name="filename"
+                    />
+                  </div>
+                </div> */}
                 <button onClick={handleSubmit}>Submit</button>
               </div>
             </section>
