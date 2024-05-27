@@ -1,0 +1,21 @@
+/* css for blog_item-right*/
+.blog__item-right{border:var(--border-1px);border-radius:10px;padding:30px;background-color:var(--sub-bg)}.blog__item-right h3 a{margin:20px 0}.blog__item-right h3 a:hover{color:var(--primary-color)}.blog__item-right span{color:var(--footer-color)}.blog__tag{color:var(--primary-color)!important;padding:2px 15px;background-color:var(--white);border-radius:100px}
+
+/* for radius-10*/
+.radius-10 {
+    border-radius: 10px;
+  }
+
+  /* for blog tag*/
+  .blog__tag {
+    color: var(--primary-color) !important;
+    padding: 2px 15px;
+    background-color: var(--white);
+    border-radius: 100px;
+  }
+
+  /* for details-container-right*/
+  .details-container-right{display:block;text-align:center}
+
+  /* and */
+  .details-container-right{display:block;text-align:center}

@@ -21,24 +21,20 @@ export default function Forms() {
   const [logError, setLogError] = useState([]);
 
   // Event Updator
-  // Technical Events
-  const [checkCoding, setCoding] = useState(false);
-  const [checkIT_QUIZ, setIT_QUIZ] = useState(false);
-  const [checkIT_MANAGER, setIT_MANAGER] = useState(false);
-  const [checkTREASURE_HUNT, setTREASURE_HUNT] = useState(false);
+  const [selectedEvents, setSelectedEvents] = useState({
+    coding: false,
+    it_quiz: false,
+    it_manager: false,
+    treasure_hunt: false,
+    bgmi: false,
+    among_us: false,
+    nfs: false,
+    reverse_charades: false,
+    group_dance: false,
+    fashion_show: false,
+  });
 
-  // Gaming Events
-  const [checkBGMI, setBGMI] = useState(false);
-  const [checkAMONG_US, setAMONG_US] = useState(false);
-  const [checkNEED_FOR_SPEED, setNEED_FOR_SPEED] = useState(false);
-  const [checkREVERSE_CHARADES, setREVERSE_CHARADES] = useState(false);
-
-  // Cultural Events
-  const [checkGROUP_DANCE, setGROUP_DANCE] = useState(false);
-  const [checkFASHION_SHOW, setFASHION_SHOW] = useState(false);
-
-  function checker(e) {
-    e.preventDefault();
+  function checker() {
     const errors = [];
     if (name.length === 0) {
       errors.push("Enter your name");
@@ -59,19 +55,30 @@ export default function Forms() {
   }
 
   function checkboxActive(e) {
-    console.log(e.target.id);
+    const { id, checked } = e.target;
+    setSelectedEvents((prevEvents) => ({
+      ...prevEvents,
+      [id]: checked,
+    }));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    checker();
+    if (logError.length === 0) {
+      document.getElementById("myForm").submit();
+    }
   }
 
   return (
     <>
-      <form
-
-        id="myForm"
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd3afF6ukRTOUg2oHHJSGGaEVGqOCKfl_TNjvzolFH0dpOfHg/formResponse"
-        method="POST"
-      >
-        <section className="section-info">
-          <section className="myform">
+      <section className="section-info">
+        <section className="myform">
+          <form
+            id="myForm"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0n_XvZRkXJWoUkYOY7REzZX7N8GMnpAJRzlHqISEAUOF2Kg/formResponse"
+            method="POST"
+          >
             <div className="form-container">
               <div className="event-logo"></div>
               <div className="event-title">KAIROS 24</div>
@@ -79,31 +86,41 @@ export default function Forms() {
                 <NamesAndPhoneNo
                   text="Name"
                   textType="text"
-                  inputId="name"
-                  inputName="entry.1868876427"
+                  textId="name"
                   textPlaceHolder="Name"
                   onValueChange={(e) => setName(e.target.value)}
                   ability={isReadOnly}
+                  name="entry.480650766"
+                  value={name}
                 />
                 <NamesAndPhoneNo
                   text="Phone No"
                   textType="tel"
-                  inputId="phoneNo"
-                  inputName="entry.1706755647"
+                  textId="phoneNo"
                   textPlaceHolder="Phone No"
                   onValueChange={(e) => setPhoneNO(e.target.value)}
                   ability={isReadOnly}
+                  name="entry.484946341"
+                  value={phoneNO}
                 />
                 <NamesAndPhoneNo
                   text="College Name"
                   textType="text"
-                  inputId="collegeName"
-                  inputName="entry.498382195"
+                  textId="collegeName"
                   textPlaceHolder="College Name"
                   onValueChange={(e) => setCollegeName(e.target.value)}
                   ability={isReadOnly}
+                  name="entry.1573106079"
+                  value={collegeName}
                 />
-                
+                <label className="syo">Select your Option </label>
+                <select className="syo">
+                  <option value="" disabled>
+                    Select Registration Type
+                  </option>
+                  <option>Group Registration</option>
+                  <option>Individual</option>
+                </select>
                 <br />
                 <div className="snackBar">
                   <div>
@@ -117,59 +134,69 @@ export default function Forms() {
                     ))}
                   </div>
                 </div>
-                <button className="fb" type="submit" onClick={checker}>
+                <button className="fb" type="button" onClick={checker}>
                   {isReadOnly ? "Edit" : "Next"}
                 </button>
               </div>
             </div>
-          </section>
+            <input type="hidden" name="entry.480650766" value={name} />
+            <input type="hidden" name="entry.484946341" value={phoneNO} />
+            <input type="hidden" name="entry.1573106079" value={collegeName} />
+            {Object.keys(selectedEvents).map((eventKey, index) => (
+              <input
+                type="hidden"
+                name={
+                  {
+                    coding: "entry.1371549682",
+                    it_quiz: "entry.844299347",
+                    it_manager: "entry.1136504761",
+                    treasure_hunt: "entry.712945024",
+                    bgmi: "entry.578974792",
+                    among_us: "entry.1491703766",
+                    nfs: "entry.620680496",
+                    reverse_charades: "entry.1925701189",
+                    group_dance: "entry.1510089219",
+                    fashion_show: "entry.1260383185",
+                  }[eventKey]
+                }
+                value={selectedEvents[eventKey] ? "Yes" : "No"}
+                key={index}
+              />
+            ))}
+          </form>
         </section>
+      </section>
 
-        <section className="section-info group-registration">
-          <div className="vid">
-            <div className="g2">
-              <section className="gt">
-                <h2 className="main-title">GROUP REGISTRATION</h2>
-                <div className="container-form">
-                  <Event
-                    className="te"
-                    category="TECHNICAL EVENTS"
-                    eventID={[
-                      "Coding",
-                      "IT QUIZ",
-                      "IT MANAGER",
-                      "TREASURE HUNT",
-                    ]}
-                    handleChange={(e) => checkboxActive(e)}
-                  />
-                  <Event
-                    className="ge"
-                    category="GAMING EVENTS"
-                    eventID={[
-                      "BGMI",
-                      "AMONG US",
-                      "NEED FOR SPEED",
-                      "REVERSE CHARADES",
-                    ]}
-                    handleChange={(e) => checkboxActive(e)}
-                  />
-                  <Event
-                    className="ce"
-                    category="CULTURAL EVENTS"
-                    eventID={["GROUP DANCE", "FASHION SHOW"]}
-                    handleChange={(e) => checkboxActive(e)}
-                    
-                  />
-                  <button className="sf" type="submit" onClick={checker}>
-                    Submit
-                </button>
-                  
-                </div>
-              </section>
-            </div>
+      <section className="section-info group-registration">
+        <div className="vid">
+          <div className="g2">
+            <section className="gt">
+              <h2 className="main-title">GROUP REGISTRATION</h2>
+              <div className="container-form">
+                <Event
+                  className="te"
+                  category="TECHNICAL EVENTS"
+                  eventID={["coding", "it_quiz", "it_manager", "treasure_hunt"]}
+                  handleChange={checkboxActive}
+                />
+                <Event
+                  className="ge"
+                  category="GAMING EVENTS"
+                  eventID={["bgmi", "among_us", "nfs", "reverse_charades"]}
+                  handleChange={checkboxActive}
+                />
+                <Event
+                  className="ce"
+                  category="CULTURAL EVENTS"
+                  eventID={["group_dance", "fashion_show"]}
+                  handleChange={checkboxActive}
+                />
+                <button onClick={handleSubmit}>Submit</button>
+              </div>
+            </section>
           </div>
-        </section>
-      </form>
+        </div>
+      </section>
     </>
   );
 }
