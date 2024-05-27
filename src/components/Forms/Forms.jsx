@@ -9,10 +9,9 @@ import Event from "./Events";
 import { useState } from "react";
 
 export default function Forms() {
-  const NameId = 'entry.1868876427';
+  const NameId = "entry.1868876427";
   const formData = new FormData();
-  // formData.append(NameId, form.name);
-  console.log(formData);
+
   // Participants Info
   const [name, setName] = useState("");
   const [phoneNO, setPhoneNO] = useState("");
@@ -63,7 +62,20 @@ export default function Forms() {
   }
 
   function checkboxActive(e) {
-    console.log(e.target.id);
+    switch (e.target.id) {
+      case 'Coding': setCoding((prev) => !prev);
+      case 'IT_QUIZ': setIT_QUIZ((prev) => !prev);
+      case 'IT_MANAGER': setIT_MANAGER((prev) => !prev);
+      case 'TREASURE_HUNT': setTREASURE_HUNT((prev) => !prev);
+
+      case 'BGMI': setBGMI((prev) => !prev);
+      case 'AMONG_US': setAMONG_US((prev) => !prev);
+      case 'NEED_FOR_SPEED': setNEED_FOR_SPEED((prev) => !prev);
+      case 'REVERSE_CHARADES': setREVERSE_CHARADES((prev) => !prev);
+
+      case 'GROUP_DANCE': setGROUP_DANCE((prev) => !prev);
+      case 'FASHION_SHOW': setFASHION_SHOW((prev) => !prev);
+    }
   }
 
   function checkerSubmit() {
@@ -83,7 +95,7 @@ export default function Forms() {
         NEED_FOR_SPEED,
         REVERSE_CHARADES,
         GROUP_DANCE,
-        FASHION_SHOW
+        FASHION_SHOW,
       }
     );
   }
@@ -148,53 +160,54 @@ export default function Forms() {
             </div>
           </section>
         </section>
-
-        <section className="section-info group-registration">
-          <div className="vid">
-            <div className="g2">
-              <section className="gt">
-                <h2 className="main-title">EVENT REGISTRATION</h2>
-                <div className="container-form">
-                  <Event
-                    className="te"
-                    category="TECHNICAL EVENTS"
-                    eventID={[
-                      "Coding",
-                      "IT QUIZ",
-                      "IT MANAGER",
-                      "TREASURE HUNT",
-                    ]}
-                    handleChange={(e) => checkboxActive(e)}
-                  />
-                  <Event
-                    className="ge"
-                    category="GAMING EVENTS"
-                    eventID={[
-                      "BGMI",
-                      "AMONG US",
-                      "NEED FOR SPEED",
-                      "REVERSE CHARADES",
-                    ]}
-                    handleChange={(e) => checkboxActive(e)}
-                  />
-                  <Event
-                    className="ce"
-                    category="CULTURAL EVENTS"
-                    eventID={["GROUP DANCE", "FASHION SHOW"]}
-                    handleChange={(e) => checkboxActive(e)}
-                  />
-                  <button
-                    className="sf"
-                    type="submit"
-                    onClick={() => checkerSubmit()}
-                  >
-                    Submit
-                  </button>
-                </div>
-              </section>
+        {isReadOnly && (
+          <section className="section-info group-registration">
+            <div className="vid">
+              <div className="g2">
+                <section className="gt">
+                  <h2 className="main-title">EVENT REGISTRATION</h2>
+                  <div className="container-form">
+                    <Event
+                      className="te"
+                      category="TECHNICAL EVENTS"
+                      eventID={[
+                        "Coding",
+                        "IT QUIZ",
+                        "IT MANAGER",
+                        "TREASURE HUNT",
+                      ]}
+                      handleChange={(e) => checkboxActive(e)}
+                    />
+                    <Event
+                      className="ge"
+                      category="GAMING EVENTS"
+                      eventID={[
+                        "BGMI",
+                        "AMONG US",
+                        "NEED FOR SPEED",
+                        "REVERSE CHARADES",
+                      ]}
+                      handleChange={(e) => checkboxActive(e)}
+                    />
+                    <Event
+                      className="ce"
+                      category="CULTURAL EVENTS"
+                      eventID={["GROUP DANCE", "FASHION SHOW"]}
+                      handleChange={(e) => checkboxActive(e)}
+                    />
+                    <button
+                      className="sf"
+                      type="submit"
+                      onClick={() => checkerSubmit()}
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </section>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
       </form>
     </>
   );
