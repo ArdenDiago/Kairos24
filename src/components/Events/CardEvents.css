@@ -3,29 +3,40 @@
 }
 
 .my-Card-section {
+  background-color: #000000;
   padding: 10px;
-  gap: 10px;
 }
 .my-Card-section, .card-size > h1 {
     text-align: center;
 }
+.card-size {
+  background-color: rgb(25,25,25);
+  padding: 20px;
+  border-radius: 30px;
+}
 .my-Card-section > h1 {
+  color: aliceblue;
     font-size: 50px;
 }
 .my-Card-div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--CardSize), 0em));
-  gap: 2em;
+  gap: 4em;
 }
 .card-size > img {
   width: var(--CardSize);
+  border-radius: 30px;
+
 }
 .card-size {
+  border: 1px solid white;
   width: var(--CardSize);
-  border-color: black 10px;
 }
 .card-body > h3 {
     text-align: left;
+}
+.card-body {
+  color: #ffffff;
 }
 .time-venus {
     display: grid;
@@ -42,4 +53,7 @@
 }
 .card-contact-left {
     border-right: 1px solid white;
+}
+.card-text > li {
+  text-align: left;
 }
