@@ -243,7 +243,8 @@ export default function Forms() {
                       <h1>Amount: {totalAmount}</h1>
                       <label>
                         <a
-                          href="`https://rzp.io/l/f0MEd2Ld6w"
+                          href="https://rzp.io/l/f0MEd2Ld6w"
+
                           style={{ color: "black" }}
                         >
                           Click To Pay
