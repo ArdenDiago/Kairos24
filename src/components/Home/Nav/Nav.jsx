@@ -35,7 +35,7 @@ export default function Nav() {
                 <a href="#">Contact</a>
               </li>
               <li className="nav-item">
-                <a href="#">Brochure</a>
+                <a href="https://drive.google.com/file/d/1SUgLUW10s4OFs89hcw16qaFM_JAu8RlR/view?usp=drive_link ">Brochure</a>
               </li>
             </ul>
           </nav>

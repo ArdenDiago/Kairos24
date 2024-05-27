@@ -258,7 +258,7 @@ option[disabled]:first-of-type {
 }
 .myform{
   background-image: url("https://images.app.goo.gl/CbuQPWSgXChgdM4y6");
-  background-color: blue;
+  
 }
 .form-container{
   margin-top: 40px;
@@ -391,4 +391,73 @@ label {
     font-size: 8px;
     margin-top: 5px;
   }
+}
+#backgroundVideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  background: no-repeat;
+  background-size: cover;
+}
+
+.section-info {
+  position: relative;
+  z-index: 1;
+}
+
+.myform, .vid {
+  position: relative;
+  z-index: 1;
+   /* Slightly transparent to see the background video */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-container {
+  position: relative;
+  z-index: 2;
+}
+
+.snackBar {
+  position: relative;
+  z-index: 2;
+}
+
+.inputs {
+  position: relative;
+  z-index: 2;
+}
+
+.inputs input, .inputs button, .inputs p {
+  position: relative;
+  z-index: 2;
+}
+
+.inputs .fb {
+  background-color: #007bff; /* Your button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.inputs .fb:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.inputs .snackBar p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.inputs .snackBar p span {
+  margin-right: 10px;
 }
