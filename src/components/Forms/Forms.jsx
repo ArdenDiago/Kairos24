@@ -4,6 +4,7 @@ import "./Events.css";
 import svgFile from "./errorImg.svg";
 import NamesAndPhoneNo from "./NamesAndPhoneNo";
 import Event from "./Events";
+import videoa from "./JJKregisterMod.mp4";
 
 export default function Forms() {
   // Participants Info
@@ -98,6 +99,10 @@ export default function Forms() {
 
   return (
     <>
+      <video autoPlay muted loop id="backgroundVideo">
+        <source src={videoa} type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
       <section className="section-info">
         <section className="myform">
           <form
