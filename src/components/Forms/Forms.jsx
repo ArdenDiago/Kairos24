@@ -113,8 +113,7 @@ export default function Forms() {
                   name="entry.1573106079"
                   value={collegeName}
                 />
-                
-                
+
                 <br />
                 <div className="snackBar">
                   <div>
@@ -185,6 +184,28 @@ export default function Forms() {
                   eventID={["group_dance", "fashion_show"]}
                   handleChange={checkboxActive}
                 />
+                <div
+                  className="box"
+                  style={{
+                    background: "red",
+                    color: "white",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    padding: "10px",
+                    margin: "20px",
+                  }}
+                >
+                  <h2>
+                    Paymet will open on the 28<sup>th</sup> of May.
+                  </h2>
+                  <br />
+                  <h5>we are sorry for the inconvenience</h5>
+                  <p>
+                    You can do the registration we will contact you for the
+                    payment.
+                  </p>
+                </div>
                 <button onClick={handleSubmit}>Submit</button>
               </div>
             </section>
