@@ -75,7 +75,7 @@ grid-template-columns: auto auto;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 321px) and (max-width: 375px) {
   .my-Card-div {
     grid-template-columns: auto;
   }
@@ -84,7 +84,7 @@ grid-template-columns: auto auto;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 376px) and (max-width: 425px) {
   .my-Card-div {
     grid-template-columns: auto;
   }
