@@ -391,4 +391,13 @@ label {
     font-size: 8px;
     margin-top: 5px;
   }
+  .box {
+    padding: 0px;
+  }
+  .box > h2 {
+    font-size: 15px;
+  }
+  .my-payment > h1 {
+    font-size: 15px;
+  }
 }

@@ -239,18 +239,23 @@ export default function Forms() {
                     </p>
                   </div>
                   <div className="box ">
+                    <h2 style={{ color: "green" }}>
+                      Please do enter the proper amount That is being displayed.
+                    </h2>
                     <div className="my-payment">
                       <h1>Amount: {totalAmount}</h1>
                       <label>
                         <a
                           href="https://rzp.io/l/f0MEd2Ld6w"
-
                           style={{ color: "black" }}
                         >
                           Click To Pay
                         </a>
                       </label>
                     </div>
+                  </div>
+                  <div className="box">
+                    <input type="file" id="myFile" name="filename" />
                   </div>
                   <button onClick={handleSubmit}>Submit</button>
                 </div>

@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Gridbox({
   eventImg,
   text,
@@ -14,11 +12,11 @@ export default function Gridbox({
       <img className="card-img-top" src={eventImg} alt="Card image cap" />
       <div className="card-body">
         <h1>{eventName}</h1>
-        <div className="time-venu">
-          <div>{time}</div>
-          <div>{venu}</div>
+        <div className="card-contact card-contact-top">
+          <div className="card-contact-left">Time: {time}</div>
+          <div>Venu: {venu}</div>
         </div>
-        <ul className="card-text" dangerouslySetInnerHTML={{__html: text}}></ul>
+        <ul className="card-text card-contact-top" dangerouslySetInnerHTML={{__html: text}}></ul>
         <h3>Registration Fees: {regAMT}</h3>
         <div className="card-contact">
           <div className="card-contact-left">

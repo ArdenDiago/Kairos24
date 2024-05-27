@@ -22,6 +22,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--CardSize), 0em));
   gap: 4em;
+  padding-bottom: 50px;
 }
 .card-size > img {
   width: var(--CardSize);
@@ -40,20 +41,54 @@
 }
 .time-venus {
     display: grid;
+    grid-row: auto;
+    font-size: 1px;
     grid-template-columns: auto auto;
 }
 .time-venus > div {
-    border: 1px solid white;
+grid-template-columns: auto auto;
 }
 .card-contact {
-    border-top: 1px solid white;
     padding-top: 5px;
     display: grid;
     grid-template-columns: auto auto;
+}
+.card-contact-top {
+  border-top: 1px solid white;
 }
 .card-contact-left {
     border-right: 1px solid white;
 }
 .card-text > li {
   text-align: left;
+}
+.card-text {
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  .my-Card-div {
+    grid-template-columns: auto;
+  }
+  :root {
+    --CardSize: 260px
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .my-Card-div {
+    grid-template-columns: auto;
+  }
+  :root {
+    --CardSize: 311px
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .my-Card-div {
+    grid-template-columns: auto;
+  }
+  :root {
+    --CardSize: 360px
+  }
 }
