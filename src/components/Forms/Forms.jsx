@@ -63,18 +63,28 @@ export default function Forms() {
 
   function checkboxActive(e) {
     switch (e.target.id) {
-      case 'Coding': setCoding((prev) => !prev);
-      case 'IT_QUIZ': setIT_QUIZ((prev) => !prev);
-      case 'IT_MANAGER': setIT_MANAGER((prev) => !prev);
-      case 'TREASURE_HUNT': setTREASURE_HUNT((prev) => !prev);
+      case "Coding":
+        setCoding((prev) => !prev);
+      case "IT_QUIZ":
+        setIT_QUIZ((prev) => !prev);
+      case "IT_MANAGER":
+        setIT_MANAGER((prev) => !prev);
+      case "TREASURE_HUNT":
+        setTREASURE_HUNT((prev) => !prev);
 
-      case 'BGMI': setBGMI((prev) => !prev);
-      case 'AMONG_US': setAMONG_US((prev) => !prev);
-      case 'NEED_FOR_SPEED': setNEED_FOR_SPEED((prev) => !prev);
-      case 'REVERSE_CHARADES': setREVERSE_CHARADES((prev) => !prev);
+      case "BGMI":
+        setBGMI((prev) => !prev);
+      case "AMONG_US":
+        setAMONG_US((prev) => !prev);
+      case "NEED_FOR_SPEED":
+        setNEED_FOR_SPEED((prev) => !prev);
+      case "REVERSE_CHARADES":
+        setREVERSE_CHARADES((prev) => !prev);
 
-      case 'GROUP_DANCE': setGROUP_DANCE((prev) => !prev);
-      case 'FASHION_SHOW': setFASHION_SHOW((prev) => !prev);
+      case "GROUP_DANCE":
+        setGROUP_DANCE((prev) => !prev);
+      case "FASHION_SHOW":
+        setFASHION_SHOW((prev) => !prev);
     }
   }
 
@@ -102,113 +112,108 @@ export default function Forms() {
 
   return (
     <>
-      <form
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd3afF6ukRTOUg2oHHJSGGaEVGqOCKfl_TNjvzolFH0dpOfHg/formResponse"
-        method="POST"
-      >
-        <section className="section-info">
-          <section className="myform">
-            <div className="form-container">
-              <div className="event-logo"></div>
-              <div className="event-title">KAIROS 24</div>
-              <div className="inputs">
-                <NamesAndPhoneNo
-                  text="Name"
-                  textType="text"
-                  inputId="name"
-                  inputName="entry.1868876427"
-                  textPlaceHolder="Name"
-                  onValueChange={(e) => setName(e.target.value)}
-                  ability={isReadOnly}
-                />
-                <NamesAndPhoneNo
-                  text="Phone No"
-                  textType="tel"
-                  inputId="phoneNo"
-                  inputName="entry.1706755647"
-                  textPlaceHolder="Phone No"
-                  onValueChange={(e) => setPhoneNO(e.target.value)}
-                  ability={isReadOnly}
-                />
-                <NamesAndPhoneNo
-                  text="College Name"
-                  textType="text"
-                  inputId="collegeName"
-                  inputName="entry.498382195"
-                  textPlaceHolder="College Name"
-                  onValueChange={(e) => setCollegeName(e.target.value)}
-                  ability={isReadOnly}
-                />
+      <section className="section-info">
+        <section className="myform">
+          <div className="form-container">
+            <div className="event-logo"></div>
+            <div className="event-title">KAIROS 24</div>
+            <div className="inputs">
+              <NamesAndPhoneNo
+                text="Name"
+                textType="text"
+                inputId="name"
+                inputName="entry.1868876427"
+                textPlaceHolder="Name"
+                onValueChange={(e) => setName(e.target.value)}
+                ability={isReadOnly}
+              />
+              <NamesAndPhoneNo
+                text="Phone No"
+                textType="tel"
+                inputId="phoneNo"
+                inputName="entry.1706755647"
+                textPlaceHolder="Phone No"
+                onValueChange={(e) => setPhoneNO(e.target.value)}
+                ability={isReadOnly}
+              />
+              <NamesAndPhoneNo
+                text="College Name"
+                textType="text"
+                inputId="collegeName"
+                inputName="entry.498382195"
+                textPlaceHolder="College Name"
+                onValueChange={(e) => setCollegeName(e.target.value)}
+                ability={isReadOnly}
+              />
 
-                <br />
-                <div className="snackBar">
-                  <div>
-                    {logError.map((err, index) => (
-                      <p key={index}>
-                        <span>
-                          <img src={svgFile} alt="Error Icon" />
-                        </span>
-                        {err}
-                      </p>
-                    ))}
-                  </div>
+              <br />
+              <div className="snackBar">
+                <div>
+                  {logError.map((err, index) => (
+                    <p key={index}>
+                      <span>
+                        <img src={svgFile} alt="Error Icon" />
+                      </span>
+                      {err}
+                    </p>
+                  ))}
                 </div>
-                <button className="fb" type="submit" onClick={checker}>
-                  {isReadOnly ? "Edit" : "Next"}
-                </button>
               </div>
+              <button className="fb" type="submit" onClick={checker}>
+                {isReadOnly ? "Edit" : "Next"}
+              </button>
             </div>
-          </section>
+          </div>
         </section>
-        {isReadOnly && (
-          <section className="section-info group-registration">
-            <div className="vid">
-              <div className="g2">
-                <section className="gt">
-                  <h2 className="main-title">EVENT REGISTRATION</h2>
-                  <div className="container-form">
-                    <Event
-                      className="te"
-                      category="TECHNICAL EVENTS"
-                      eventID={[
-                        "Coding",
-                        "IT QUIZ",
-                        "IT MANAGER",
-                        "TREASURE HUNT",
-                      ]}
-                      handleChange={(e) => checkboxActive(e)}
-                    />
-                    <Event
-                      className="ge"
-                      category="GAMING EVENTS"
-                      eventID={[
-                        "BGMI",
-                        "AMONG US",
-                        "NEED FOR SPEED",
-                        "REVERSE CHARADES",
-                      ]}
-                      handleChange={(e) => checkboxActive(e)}
-                    />
-                    <Event
-                      className="ce"
-                      category="CULTURAL EVENTS"
-                      eventID={["GROUP DANCE", "FASHION SHOW"]}
-                      handleChange={(e) => checkboxActive(e)}
-                    />
-                    <button
-                      className="sf"
-                      type="submit"
-                      onClick={() => checkerSubmit()}
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </section>
-              </div>
+      </section>
+      {isReadOnly && (
+        <section className="section-info group-registration">
+          <div className="vid">
+            <div className="g2">
+              <section className="gt">
+                <h2 className="main-title">EVENT REGISTRATION</h2>
+                <div className="container-form">
+                  <Event
+                    className="te"
+                    category="TECHNICAL EVENTS"
+                    eventID={[
+                      "Coding",
+                      "IT QUIZ",
+                      "IT MANAGER",
+                      "TREASURE HUNT",
+                    ]}
+                    handleChange={(e) => checkboxActive(e)}
+                  />
+                  <Event
+                    className="ge"
+                    category="GAMING EVENTS"
+                    eventID={[
+                      "BGMI",
+                      "AMONG US",
+                      "NEED FOR SPEED",
+                      "REVERSE CHARADES",
+                    ]}
+                    handleChange={(e) => checkboxActive(e)}
+                  />
+                  <Event
+                    className="ce"
+                    category="CULTURAL EVENTS"
+                    eventID={["GROUP DANCE", "FASHION SHOW"]}
+                    handleChange={(e) => checkboxActive(e)}
+                  />
+                  <button
+                    className="sf"
+                    type="submit"
+                    onClick={() => checkerSubmit()}
+                  >
+                    Submit
+                  </button>
+                </div>
+              </section>
             </div>
-          </section>
-        )}
-      </form>
+          </div>
+        </section>
+      )}
     </>
   );
 }
