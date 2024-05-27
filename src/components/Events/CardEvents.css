@@ -1,5 +1,5 @@
 :root {
-  --CardSize: 300px;
+  --CardSize: 250px;
 }
 
 .my-Card-section {
@@ -50,6 +50,7 @@ grid-template-columns: auto auto;
 }
 .card-contact {
     padding-top: 5px;
+    padding: 10px;
     display: grid;
     grid-template-columns: auto auto;
 }

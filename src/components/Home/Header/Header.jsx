@@ -7,7 +7,7 @@ import Text from "../Text/Text";
 
 export default function Header() {
   return (
-    <section className="hero-section">
+    <section id="Home" className="hero-section">
       <div className="top-10">
         <Nav />
       </div>

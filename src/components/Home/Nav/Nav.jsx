@@ -23,19 +23,19 @@ export default function Nav() {
           <nav className="nav-container">
             <ul className="nav-list">
               <li className="nav-item">
-                <a href="#">Home</a>
+                <a href="#Home">Home</a>
               </li>
               <li className="nav-item">
-                <a href="#AbtUs">AboutUs</a>
-              </li>
-              <li className="nav-item">
-                <a href="#">Events</a>
+                <a href="#Events">Events</a>
               </li>
               <li className="nav-item">
                 <a href="#">Contact</a>
               </li>
               <li className="nav-item">
-                <a href="#">Brochure</a>
+                <a href="#AbtUs">AboutUs</a>
+              </li>
+              <li className="nav-item">
+                <a href="https://drive.google.com/file/d/1SUgLUW10s4OFs89hcw16qaFM_JAu8RlR/view?usp=drive_link" target="blank">Brochure</a>
               </li>
             </ul>
           </nav>
