@@ -1,25 +1,25 @@
-import React from "react";
-
 export default function NamesAndPhoneNo({
   text,
   textType,
-  inputId,
-  inputName,
+  textId,
   textPlaceHolder,
   onValueChange,
   ability,
+  name,
+  value,
 }) {
   return (
     <>
       <label>{text}</label>
       <input
         type={textType}
-        id={inputId}
-        name={inputName}
+        id={textId}
+        name={name}
         placeholder={textPlaceHolder}
         onChange={onValueChange}
         required
         disabled={ability}
+        value={value}
       />
     </>
   );
