@@ -1,0 +1,24 @@
+:root {
+  --CardSize: 300px;
+}
+
+.my-Card-section {
+  padding: 10px;
+  gap: 10px;
+  text-align: center;
+}
+.my-Card-section > h1 {
+    font-size: 50px;
+}
+.my-Card-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--CardSize), 0em));
+  gap: 2em;
+}
+.card-size > img {
+  width: var(--CardSize);
+}
+.card-size {
+  width: var(--CardSize);
+  border-color: black 10px;
+}
