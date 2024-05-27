@@ -9,9 +9,6 @@ import Event from "./Events";
 import { useState } from "react";
 
 export default function Forms() {
-  const NameId = "entry.1868876427";
-  const formData = new FormData();
-
   // Participants Info
   const [name, setName] = useState("");
   const [phoneNO, setPhoneNO] = useState("");
@@ -62,47 +59,48 @@ export default function Forms() {
   }
 
   function checkboxActive(e) {
-    switch (e.target.id) {
-      case 'Coding': setCoding((prev) => !prev);
-      case 'IT_QUIZ': setIT_QUIZ((prev) => !prev);
-      case 'IT_MANAGER': setIT_MANAGER((prev) => !prev);
-      case 'TREASURE_HUNT': setTREASURE_HUNT((prev) => !prev);
-
-      case 'BGMI': setBGMI((prev) => !prev);
-      case 'AMONG_US': setAMONG_US((prev) => !prev);
-      case 'NEED_FOR_SPEED': setNEED_FOR_SPEED((prev) => !prev);
-      case 'REVERSE_CHARADES': setREVERSE_CHARADES((prev) => !prev);
-
-      case 'GROUP_DANCE': setGROUP_DANCE((prev) => !prev);
-      case 'FASHION_SHOW': setFASHION_SHOW((prev) => !prev);
+    const valueID = e.target.id;
+    switch (value) {
+      case "Coding":
+        setCoding((prev) => !prev);
+        break;
+      case "IT QUIZ":
+        setIT_QUIZ((prev) => !prev);
+        break;
+      case "IT MANAGER":
+        setIT_MANAGER((prev) => !prev);
+        break;
+      case "TREASURE HUNT":
+        setTREASURE_HUNT((prev) => !prev);
+        break;
+      case "BGMI":
+        setBGMI((prev) => !prev);
+        break;
+      case "AMONG US":
+        setAMONG_US((prev) => !prev);
+        break;
+      case "NEED FOR SPEED":
+        setNEED_FOR_SPEED((prev) => !prev);
+        break;
+      case "REVERSE CHARADES":
+        setREVERSE_CHARADES((prev) => !prev);
+        break;
+      case "GROUP DANCE":
+        setGROUP_DANCE((prev) => !prev);
+        break;
+      case "FASHION SHOW":
+        setFASHION_SHOW((prev) => !prev);
+        break;
     }
   }
 
   function checkerSubmit() {
-    // Database
-    axios.post(
-      "https://sheet.best/api/sheets/c664d3e1-1d3e-41a0-8037-fdf702acb2f1",
-      {
-        name,
-        phoneNO,
-        collegeName,
-        Coding,
-        IT_QUIZ,
-        IT_MANAGER,
-        TREASURE_HUNT,
-        BGMI,
-        AMONG_US,
-        NEED_FOR_SPEED,
-        REVERSE_CHARADES,
-        GROUP_DANCE,
-        FASHION_SHOW,
-      }
-    );
   }
 
   return (
     <>
       <form
+        id="myForm"
         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd3afF6ukRTOUg2oHHJSGGaEVGqOCKfl_TNjvzolFH0dpOfHg/formResponse"
         method="POST"
       >
@@ -160,54 +158,53 @@ export default function Forms() {
             </div>
           </section>
         </section>
-        {isReadOnly && (
-          <section className="section-info group-registration">
-            <div className="vid">
-              <div className="g2">
-                <section className="gt">
-                  <h2 className="main-title">EVENT REGISTRATION</h2>
-                  <div className="container-form">
-                    <Event
-                      className="te"
-                      category="TECHNICAL EVENTS"
-                      eventID={[
-                        "Coding",
-                        "IT QUIZ",
-                        "IT MANAGER",
-                        "TREASURE HUNT",
-                      ]}
-                      handleChange={(e) => checkboxActive(e)}
-                    />
-                    <Event
-                      className="ge"
-                      category="GAMING EVENTS"
-                      eventID={[
-                        "BGMI",
-                        "AMONG US",
-                        "NEED FOR SPEED",
-                        "REVERSE CHARADES",
-                      ]}
-                      handleChange={(e) => checkboxActive(e)}
-                    />
-                    <Event
-                      className="ce"
-                      category="CULTURAL EVENTS"
-                      eventID={["GROUP DANCE", "FASHION SHOW"]}
-                      handleChange={(e) => checkboxActive(e)}
-                    />
-                    <button
-                      className="sf"
-                      type="submit"
-                      onClick={() => checkerSubmit()}
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </section>
-              </div>
+
+        <section className="section-info group-registration">
+          <div className="vid">
+            <div className="g2">
+              <section className="gt">
+                <h2 className="main-title">GROUP REGISTRATION</h2>
+                <div className="container-form">
+                  <Event
+                    className="te"
+                    category="TECHNICAL EVENTS"
+                    eventID={[
+                      "Coding",
+                      "IT QUIZ",
+                      "IT MANAGER",
+                      "TREASURE HUNT",
+                    ]}
+                    handleChange={(e) => checkboxActive(e)}
+                  />
+                  <Event
+                    className="ge"
+                    category="GAMING EVENTS"
+                    eventID={[
+                      "BGMI",
+                      "AMONG US",
+                      "NEED FOR SPEED",
+                      "REVERSE CHARADES",
+                    ]}
+                    handleChange={(e) => checkboxActive(e)}
+                  />
+                  <Event
+                    className="ce"
+                    category="CULTURAL EVENTS"
+                    eventID={["GROUP DANCE", "FASHION SHOW"]}
+                    handleChange={(e) => checkboxActive(e)}
+                  />
+                  <button
+                    className="sf"
+                    type="submit"
+                    onClick={() => checkerSubmit()}
+                  >
+                    Submit
+                  </button>
+                </div>
+              </section>
             </div>
-          </section>
-        )}
+          </div>
+        </section>
       </form>
     </>
   );
