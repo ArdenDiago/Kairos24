@@ -10,7 +10,7 @@ function App() {
     <>
       <Suspense fallback={<Loader />}>
         <Header />
-        {/* <CardEvents /> */}
+        <CardEvents />
         <Forms />
         <AboutUs />
       </Suspense>

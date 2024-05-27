@@ -1,24 +1,31 @@
-export default function Gridbox({ testImg, text }) {
+export default function Gridbox({
+  eventImg,
+  text,
+  eventName,
+  time,
+  venu,
+  regAMT,
+  codName,
+}) {
   return (
     <div className="card card-size">
-      <img className="card-img-top" src={testImg} alt="Card image cap" />
+      <img className="card-img-top" src={eventImg} alt="Card image cap" />
       <div className="card-body">
-        <h1>Event Name</h1>
+        <h1>{eventName}</h1>
         <div className="time-venus">
-          <div>10:00 AM</div>
-          <div>Main auditorium</div>
+          <div>{time}</div>
+          <div>{venu}</div>
         </div>
-        <h3>Registration AMT: 150</h3>
+        <h3>Registration AMT: {regAMT}</h3>
         <p className="card-text">{text}</p>
         <div className="card-contact">
           <div className="card-contact-left">
-            <div>Name</div>
-            <div>7208715575</div>
+            <div>Name {codName[0].name}</div>
+            <div>+91 {codName[0].number}</div>
           </div>
           <div>
-          <div>Name</div>
-            <div>7208715575</div>
-
+            <div>Name {codName[1].name}</div>
+            <div>+91 {codName[1].number}</div>
           </div>
         </div>
       </div>
