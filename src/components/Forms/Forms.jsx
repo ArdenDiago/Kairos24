@@ -238,7 +238,7 @@ export default function Forms() {
                       payment.
                     </p>
                   </div>
-                  {/* <div className="box ">
+                  <div className="box ">
                     <div className="my-payment">
                       <h1>Amount: {totalAmount}</h1>
                       <label>
@@ -250,7 +250,7 @@ export default function Forms() {
                         </a>
                       </label>
                     </div>
-                  </div> */}
+                  </div>
                   <button onClick={handleSubmit}>Submit</button>
                 </div>
               </section>
