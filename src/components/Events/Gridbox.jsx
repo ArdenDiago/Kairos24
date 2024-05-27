@@ -22,7 +22,7 @@ export default function Gridbox({
           <div className="card-contact-left">
             {codName[0] && (
               <>
-                <div>Name: {codName[0].name}</div>
+                <div>{codName[0].name}</div>
                 <div>+91 {codName[0].number}</div>
               </>
             )}
@@ -30,7 +30,7 @@ export default function Gridbox({
           <div className="card-contact-right">
             {codName[1] && (
               <>
-                <div>Name: {codName[1].name}</div>
+                <div>{codName[1].name}</div>
                 <div>+91 {codName[1].number}</div>
               </>
             )}
