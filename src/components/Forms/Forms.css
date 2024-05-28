@@ -420,7 +420,7 @@ label {
     font-size: 15px;
   }
   video {
-    width: 500%;
+    width: 550%;
   }
   .whatsapp > img {
     width: 15em;
@@ -432,7 +432,7 @@ label {
 
 @media  screen and (min-width: 321px) and (max-width: 375px) {
   video {
-    width: 500%;
+    width: 510%;
   }
   .whatsapp > img {
     width: 15em;
@@ -451,7 +451,7 @@ label {
 
 @media  screen and (min-width: 426px) and (max-width: 768px) {
   video {
-    width: 210%;
+    width: 350%;
   }
   .whatsapp > img {
     width: 15em;
@@ -463,14 +463,14 @@ label {
 
 @media  screen and (min-width: 769px) and (max-width: 1024px) {
   video {
-    width: 160%;
+    width: 186%;
   }
 
 }
 
 @media  screen and (min-width: 1025px) and (max-width: 1440px) {
   video {
-    width: 117%;
+    width: 150%;
   }
 
 }
