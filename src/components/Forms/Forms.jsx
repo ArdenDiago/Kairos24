@@ -4,7 +4,6 @@ import "./Events.css";
 import svgFile from "./errorImg.svg";
 import NamesAndPhoneNo from "./NamesAndPhoneNo";
 import Event from "./Events";
-import formVideo from "./JJKregisterMod.mp4";
 import whatappLink from '../../assets/img/Send.jpg';
 import formVideo1 from "./JJKregisterMod.mp4";
 

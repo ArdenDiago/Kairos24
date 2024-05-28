@@ -42,8 +42,6 @@
   bottom: 20px;
   font-size: 2em;
   color: crimson;
-  
-  
 }
 
 .container::after,
@@ -69,7 +67,9 @@
   left: 0;
   top: 0;
 }
-
+.container > p {
+  text-justify: center;
+}
 .loc, .st-pauls,.pegasus {
   width: 100%;
   height: auto; /* Adjust height for better responsiveness */

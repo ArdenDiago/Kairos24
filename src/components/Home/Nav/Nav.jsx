@@ -1,7 +1,7 @@
 import "./Nav.css";
 
 // images
-import clgLogo from "../../../assets/img/ClgLogo/Collegelogo.png";
+import clgLogo from "../../../assets/img/ClgLogo/NewClgLogo.png";
 import deptLogo from "../../../assets/img/ClgLogo/DepartmentLog.png";
 
 export default function Nav() {
