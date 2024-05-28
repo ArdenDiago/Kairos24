@@ -32,6 +32,7 @@
 .card-size {
   border: 1px solid white;
   width: var(--CardSize);
+  height: max-content;
 }
 .card-body > h3 {
     text-align: left;

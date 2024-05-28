@@ -6,6 +6,7 @@ import CardEvents from "./components/Events/CardEvents.jsx";
 import { Suspense } from "react";
 
 function App() {
+  
   return (
     <>
       <Suspense fallback={<Loader />}>
