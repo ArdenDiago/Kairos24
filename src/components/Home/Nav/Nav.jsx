@@ -10,10 +10,11 @@ export default function Nav() {
       <div className="master-nav">
         <div className="Header-Bar">
           <div className="Clg-Logo">
-            <img src={clgLogo} />
+          <img src={deptLogo} />
           </div>
           <div>
-            <img src={deptLogo} />
+          <img className="cg" src={clgLogo} />
+            
           </div>
         </div>
       </div>
@@ -32,7 +33,7 @@ export default function Nav() {
                 <a href="#Reg">Registration</a>
               </li>
               <li className="nav-item">
-                <a href="#AbtUs">AboutUs</a>
+                <a href="#AbtUs">About Us</a>
               </li>
               <li className="nav-item">
                 <a href="https://drive.google.com/file/d/1SUgLUW10s4OFs89hcw16qaFM_JAu8RlR/view?usp=drive_link" target="blank">Brochure</a>

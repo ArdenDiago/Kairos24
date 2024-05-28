@@ -16,13 +16,19 @@ export default function Header() {
         <Text />
       </div>
       <div className="btn-master">
-        <Button
-          btnTarget="_blank"
-          clickHandler="https://drive.google.com/file/d/1SUgLUW10s4OFs89hcw16qaFM_JAu8RlR/view"
-          text="Brochure"
-        />
-        <Button btnTarget="_self" clickHandler={"#Reg"} text="Register Now" />
-      </div>
+      <button 
+        className="button-27 bc" 
+        onClick={() => window.open('https://drive.google.com/file/d/1SUgLUW10s4OFs89hcw16qaFM_JAu8RlR/view', '_blank')}
+      >
+        Brochure
+      </button>
+      <button 
+        className="button-27 reg" 
+        onClick={() => window.location.href = '#Reg'}
+      >
+        Register Now
+      </button>
+    </div>
     </section>
   );
 }

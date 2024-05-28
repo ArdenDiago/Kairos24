@@ -1,10 +1,12 @@
 .hero-section {
-  background-image: url("https://img.freepik.com/free-photo/bright-pop-landscape-design_23-2149213461.jpg?t=st=1716301402~exp=1716305002~hmac=0d3cb77c154f8f48bb75813a2e355772bf38fc538879ce55a294a62b4c4b027a&w=740");
+  background-image: url("jjk.jpg");
   height: 50.4em;
   width: 100%;
   position: relative;
   overflow: hidden;
   opacity: 99%;
+  background-size: contain;
+  
 }
 
 .top-10 {
@@ -44,7 +46,7 @@
   top:50vmax;
   }
   .Main-Page > h1 {
-    font-size: 4.5em;
+    font-size: 4em;
   }
   .btn-master {
     display: block;
@@ -65,7 +67,7 @@
     top:50vmax;
     }
   .Main-Page > h1 {
-    font-size: 5em;
+    font-size: 2em;
   }
   .btn-master {
     display: block;
@@ -77,7 +79,7 @@
   }
 }
 
-@media screen and (min-width: 376px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 425px) {
   .hero-section {
     background-image: url("../../../assets/img/Timer/jjk320.jpeg");
     height: 45em;
@@ -96,7 +98,7 @@
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 425px) and (max-width: 768px) {
   .hero-section {
     height: 40em;
   }
@@ -104,7 +106,7 @@
     top: 250px;
   }
   .Main-Page > h1 {
-    font-size: 9em;
+    font-size: 5em;
   }
   .btn-master {
     left: 0.9em;
