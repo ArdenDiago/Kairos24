@@ -9,6 +9,8 @@ import ItManager from '../../assets/Events/itManager.jpeg';
 import ItQuiz from '../../assets/Events/itQuiz.jpeg';
 import NFS from '../../assets/Events/nfs.jpg';
 import TreasureHunt from '../../assets/Events/treasureHunt.jpeg';
+import RC from '../../assets/Events/RC.jpeg';
+
 
 
 export const eventList = [
@@ -97,7 +99,7 @@ export const eventList = [
     text: "<li>Participants will be provided devices by the coordinators with Keyboard and controller options </li><li>Rounds : 4<li>Points : Fastest time wins</li><li> Note : Players will be responsible for any damages found on their system and Immediate disqualification will be issued</li>",
   },
   {
-    eventImg: Img1,
+    eventImg: RC,
     eventName: "Reverse Chardes",
     time: "01:00 PM",
     venu: "Mini audi",

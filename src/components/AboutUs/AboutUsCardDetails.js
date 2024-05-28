@@ -12,17 +12,7 @@ export const cardDetails = [
   {
     cssClassName: "peg",
     title: "Pegasus",
-    DESCRIPTION: `<p>Pegasus, the Computer Science Department of ST PAUL'S COLLEGE, is renowned for its 
-    commitment to excellence and innovation in technology education. The department 
-    frequently hosts guest lectures by esteemed industry professionals and academics, offering 
-    students insights into the latest technological advancements and career guidance. Numerous 
-    workshops on cutting-edge topics like artificial intelligence, cybersecurity, and data science 
-    are organized to enhance practical skills. The annual intra-department fest, Oracle, is a 
-    highlight, featuring coding contests, technical quizzes, and project exhibitions that foster 
-    competition and collaboration. Pegasus also hosts an annual hackathon, promoting creativity 
-    and teamwork in developing real-world solutions. Additionally, industrial visits to leading 
-    tech companies provide students with firsthand industry experience, bridging the gap 
-    between academic learning and professional practice.</p>`,
+    DESCRIPTION: `<p>Pegasus, the Computer Science Department at ST PAUL'S COLLEGE, excels in technology education, hosting guest lectures by industry experts and academics. It offers workshops on AI, cybersecurity, and data science, enhancing practical skills. The annual fest, Oracle, includes coding contests, quizzes, and exhibitions, fostering competition and collaboration. An annual hackathon promotes creativity in solving real-world problems. Industrial visits to top tech companies provide students firsthand industry experience, bridging academic learning with professional practice.</p>`,
   },
   {
     cssClassName: "loc",
@@ -36,6 +26,8 @@ export const cardDetails = [
       allowFullScreen
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
-    />`
+    ></iframe>
+    <p>St Pauls Campus, E-1, opposite HMT layout, Nalagadderanahalli, Peenya, Bengaluru, Karnataka 560073</p>
+    `
   },
 ];

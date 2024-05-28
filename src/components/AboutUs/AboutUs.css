@@ -6,10 +6,10 @@
 }
 
 .about {
-  background-color: rgb(51, 104, 226);
+  background-color: rgb(28, 28, 28);
 }
 
-.card-AbtUs {
+.card {
   box-shadow: 0 7px 9px 0 rgba(15, 110, 227, 0.893);
   align-items: center;
   justify-content: center;
@@ -84,7 +84,6 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 10px;
 }
-
 .as {
   text-align: center;
   color: white;

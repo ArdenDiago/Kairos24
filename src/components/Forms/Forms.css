@@ -28,7 +28,7 @@ video {
 
 .video2Part {
   overflow: hidden;
-  height: 200em;
+  /* height: 200em; */
   width: 355.5em;
 }
 .form-container {
@@ -218,7 +218,15 @@ option {
   background-color: #fff;
   color: #555;
 }
-
+.whatsapp {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5%;
+  text-align: center;
+}
+.whatsapp > img {
+  border-radius: 20px;
+}
 /* Style for placeholder option */
 option[disabled]:first-of-type {
   color: #888;
@@ -414,13 +422,24 @@ label {
   video {
     width: 500%;
   }
+  .whatsapp > img {
+    width: 15em;
+  }
+  .whatsapp {
+    font-size: 12px;
+  }
 }
 
 @media  screen and (min-width: 321px) and (max-width: 375px) {
   video {
     width: 500%;
   }
-
+  .whatsapp > img {
+    width: 15em;
+  }
+  .whatsapp {
+    font-size: 21px;
+  }
 }
 
 @media  screen and (min-width: 376px) and (max-width: 425px) {
@@ -434,7 +453,12 @@ label {
   video {
     width: 210%;
   }
-
+  .whatsapp > img {
+    width: 15em;
+  }
+  .whatsapp {
+    font-size: 15px;
+  }
 }
 
 @media  screen and (min-width: 769px) and (max-width: 1024px) {

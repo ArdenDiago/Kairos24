@@ -5,6 +5,7 @@ import svgFile from "./errorImg.svg";
 import NamesAndPhoneNo from "./NamesAndPhoneNo";
 import Event from "./Events";
 import formVideo from "./JJKregisterMod.mp4";
+import whatappLink from '../../assets/img/Send.jpg';
 import formVideo1 from "./JJKregisterMod.mp4";
 
 export default function Forms() {
@@ -100,9 +101,9 @@ export default function Forms() {
 
   return (
     <>
-      <section className="section-info">
+      <section id='Reg' className="section-info">
         <section className="myform">
-          <video autoPlay muted width="100%">
+          <video loop autoPlay muted width="100%">
             <source src={formVideo1} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -197,7 +198,7 @@ export default function Forms() {
         <section className="section-info">
           <div className="vid">
             <div className="g2">
-              <video className="video2Part" autoPlay muted width="100%">
+              <video className="video2Part" loop autoPlay muted width="100%">
                 <source src={formVideo1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -228,28 +229,6 @@ export default function Forms() {
                     eventID={["group_dance", "fashion_show"]}
                     handleChange={checkboxActive}
                   />
-                  <div
-                    className="box"
-                    style={{
-                      background: "red",
-                      color: "white",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      padding: "10px",
-                      margin: "20px",
-                    }}
-                  >
-                    <h2>
-                      Payment will open on the 28<sup>th</sup> of May.
-                    </h2>
-                    <br />
-                    <h5>We are sorry for the inconvenience</h5>
-                    <p>
-                      You can do the registration, we will contact you for the
-                      payment.
-                    </p>
-                  </div>
                   <div className="box ">
                     <h2 style={{ color: "green" }}>
                       Please do enter the proper amount That is being displayed.
@@ -267,8 +246,9 @@ export default function Forms() {
                       </label>
                     </div>
                   </div>
-                  <div className="box">
-                    <input type="file" id="myFile" name="filename" />
+                  <div className="box whatsapp">
+                    <h1>Please send the Receipt on this phone number:<br /><br /> +91 7208715575</h1>
+                    <img src={whatappLink} alt="" />
                   </div>
                   <button onClick={handleSubmit}>Submit</button>
                 </div>

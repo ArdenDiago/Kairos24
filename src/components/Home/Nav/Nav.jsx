@@ -29,7 +29,7 @@ export default function Nav() {
                 <a href="#Events">Events</a>
               </li>
               <li className="nav-item">
-                <a href="#">Contact</a>
+                <a href="#Reg">Registration</a>
               </li>
               <li className="nav-item">
                 <a href="#AbtUs">AboutUs</a>
