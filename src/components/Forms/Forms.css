@@ -16,10 +16,21 @@ input {
   place-items: center;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
- 
   background: url(FormVideo.mp4);
 }
 
+video {
+  position: absolute;
+  height: 200em;
+  width: 130%;
+  overflow: hidden;
+}
+
+.video2Part {
+  overflow: hidden;
+  height: 200em;
+  width: 355.5em;
+}
 .form-container {
   width: 800px;
   max-width: 500px;
@@ -258,7 +269,7 @@ option[disabled]:first-of-type {
 }
 .myform{
   background-image: url("https://images.app.goo.gl/CbuQPWSgXChgdM4y6");
-  background-color: blue;
+  background-color: rgb(20, 20, 20);
 }
 .form-container{
   margin-top: 40px;
@@ -267,7 +278,7 @@ option[disabled]:first-of-type {
 }
 .gt, .main-title{
   padding-top: 50px;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .box {
@@ -400,4 +411,42 @@ label {
   .my-payment > h1 {
     font-size: 15px;
   }
+  video {
+    width: 500%;
+  }
+}
+
+@media  screen and (min-width: 321px) and (max-width: 375px) {
+  video {
+    width: 500%;
+  }
+
+}
+
+@media  screen and (min-width: 376px) and (max-width: 425px) {
+  video {
+    width: 362%;
+  }
+
+}
+
+@media  screen and (min-width: 426px) and (max-width: 768px) {
+  video {
+    width: 210%;
+  }
+
+}
+
+@media  screen and (min-width: 769px) and (max-width: 1024px) {
+  video {
+    width: 160%;
+  }
+
+}
+
+@media  screen and (min-width: 1025px) and (max-width: 1440px) {
+  video {
+    width: 110%;
+  }
+
 }

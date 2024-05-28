@@ -4,6 +4,8 @@ import "./Events.css";
 import svgFile from "./errorImg.svg";
 import NamesAndPhoneNo from "./NamesAndPhoneNo";
 import Event from "./Events";
+import formVideo from "./JJKregisterMod.mp4";
+import formVideo1 from "./JJKregisterMod.mp4";
 
 export default function Forms() {
   // Participants Info
@@ -100,6 +102,11 @@ export default function Forms() {
     <>
       <section className="section-info">
         <section className="myform">
+          <video autoPlay muted width="100%">
+            <source src={formVideo1} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
           <form
             id="myForm"
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0n_XvZRkXJWoUkYOY7REzZX7N8GMnpAJRzlHqISEAUOF2Kg/formResponse"
@@ -190,6 +197,11 @@ export default function Forms() {
         <section className="section-info">
           <div className="vid">
             <div className="g2">
+              <video className="video2Part" autoPlay muted width="100%">
+                <source src={formVideo1} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+
               <section className="gt">
                 <h2 className="main-title">GROUP REGISTRATION</h2>
                 <div className="container-form">

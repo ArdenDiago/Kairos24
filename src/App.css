@@ -2,7 +2,7 @@ body {
     position: relative;
     margin: 0px;
     background-color: rgb(107, 107, 107);
-    overflow:visible;
+    overflow:scroll;
 }
 * {
     position: relative;
