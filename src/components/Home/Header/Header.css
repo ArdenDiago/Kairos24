@@ -4,6 +4,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  opacity: 99%;
 }
 
 .top-10 {
@@ -79,10 +80,10 @@
 @media screen and (min-width: 376px) and (max-width: 425px) {
   .hero-section {
     background-image: url("../../../assets/img/Timer/jjk320.jpeg");
-    height: 43em;
+    height: 45em;
   }
   .Main-Page {
-    top: 10em;
+    top: 20em;
   }
   .Main-Page > h1 {
     font-size: 5em;
