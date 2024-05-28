@@ -121,6 +121,8 @@ a:hover {
   }
 }
 
+
+
 @media screen and (min-width: 426px) and (max-width: 768px) {
   .master-nav {
     height: 60px;
@@ -189,7 +191,13 @@ a:hover {
     visibility: hidden;
   }
 }
-.cg{
-  height: 60px;
-  
+
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .btn-master > button {
+      margin-bottom: 10px;
+      font-size: 4px;
+      padding: 10px 20px;
+      min-height: 30px;
+  }
 }
