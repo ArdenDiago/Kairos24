@@ -50,7 +50,7 @@ video {
 .event-logo {
     height: 150px; /* Increase the height to accommodate the moved image */
     width: 100px;
-    background: url("../../assets/img/KairosLogo/Logo.jpeg") no-repeat center center;
+    background: url("../../assets/img/KairosLogo/Logo.png") no-repeat center center;
     background-size: 100px;
     background-position: center 40px; /* Adjust this value to move the image down */
     margin: auto; 

@@ -57,7 +57,7 @@ a:hover {
 /* Media */
 @media screen and (max-width: 320px) {
   .master-nav {
-    background-color: rgba(0, 0, 0, 0.596);
+    background-color: rgba(100, 100, 100, 0.596);
     margin: 2px;
   }
   .Clg-Logo {
@@ -70,7 +70,8 @@ a:hover {
     height: 50px;
   }
   .Header-Bar > div > img {
-    width: 100px;
+    width: 120px;
+    height: 30px;
   }
   .nav-links {
     visibility: hidden;
@@ -79,7 +80,7 @@ a:hover {
 
 @media screen and (min-width: 321px) and (max-width: 375px) {
   .master-nav {
-    background-color: rgba(0, 0, 0, 0.596);
+    background-color: rgba(100, 100, 100, 0.596);
     margin: 2px;
   }
   .Clg-Logo {
@@ -92,7 +93,8 @@ a:hover {
     height: 50px;
   }
   .Header-Bar > div > img {
-    width: 100px;
+    width: 120px;
+    height: 30px;
   }
   .nav-links {
     visibility: hidden;
@@ -101,7 +103,7 @@ a:hover {
 
 @media screen and (min-width: 376px) and (max-width: 425px) {
   .master-nav {
-    background-color: rgba(0, 0, 0, 0.596);
+    background-color: rgba(100, 100, 100, 0.596);
     margin: 2px;
   }
   .Clg-Logo {
@@ -114,7 +116,8 @@ a:hover {
     height: 50px;
   }
   .Header-Bar > div > img {
-    width: 100px;
+    width: 120px;
+    height: 30px;
   }
   .nav-links {
     visibility: hidden;

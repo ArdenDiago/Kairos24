@@ -1,7 +1,7 @@
 export const cardDetails = [
   {
     cssClassName: "spc",
-    title: "St Pauls College",
+    title: "ST PAULS COLLEGE",
     DESCRIPTION: `<p>ST PAULS COLLEGE, Bengaluru is one of the educational undertakings of the society of St Paul, an 
     international religious congregation founded by Blessed James Alberione in Alba, Italy on 20 August 
     1914. It is affiliated to Bangalore University and is recognized by the Government of Karnataka. The 
