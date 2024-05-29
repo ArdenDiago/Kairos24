@@ -1,16 +1,15 @@
 import Img1 from "../../assets/Test/test.jpg";
 
-import AmgUs from '../../assets/Events/amongUs.jpeg';
-import Bgmi from '../../assets/Events/bgmi.jpeg';
-import Coding from '../../assets/Events/cd.jpg';
-import FassionShow from '../../assets/Events/fw.jpg';
-import GroupDance from '../../assets/Events/gd.jpg';
-import ItManager from '../../assets/Events/im.jpg';
-import ItQuiz from '../../assets/Events/it.jpg';
-import NFS from '../../assets/Events/nfs.jpg';
-import TreasureHunt from '../../assets/Events/th.jpg';
-import RC from '../../assets/Events/rc.jpg';
-
+import AmgUs from "../../assets/Events/amongUs.jpeg";
+import Bgmi from "../../assets/Events/bgmi.jpeg";
+import Coding from "../../assets/Events/cd.jpg";
+import FassionShow from "../../assets/Events/fw.jpg";
+import GroupDance from "../../assets/Events/gd.jpg";
+import ItManager from "../../assets/Events/im.jpg";
+import ItQuiz from "../../assets/Events/it.jpg";
+import NFS from "../../assets/Events/nfs.jpg";
+import TreasureHunt from "../../assets/Events/th.jpg";
+import RC from "../../assets/Events/rc.jpg";
 
 export const eventList = [
   {
@@ -69,7 +68,7 @@ export const eventList = [
     regAMT: "400",
     codName: [
       { name: "Simran", number: "9863961303" },
-      { name: "Zayes", number: "6362675597" },
+      { name: "Zayed", number: "6362675597" },
     ],
     text: "<li>Maximum 3 teams from a college can take part</li><li>Each team must contain 4 players must</li><li>Cheating or emulators are strictly prohibited. If any squad is found using them , they will be immediately disqualified</li><li>GFX tool and 3rd party apps are prohibited</li><li>Check Brochure for information</li>",
   },
@@ -99,7 +98,7 @@ export const eventList = [
   },
   {
     eventImg: RC,
-    eventName: "Reverse Chardes",
+    eventName: "Reverse Charades",
     time: "01:00 PM",
     venu: "Main Audi",
     regAMT: "300",
