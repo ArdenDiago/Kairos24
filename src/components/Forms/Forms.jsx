@@ -274,6 +274,11 @@ export default function Forms() {
                   handleChange={checkboxActive}
                   />
 
+                    <div className="box ">
+                    <h2 style={{ color: "green", textAlign:"center" }}>
+                      The DJ option is only for the Non-Participants. Free Passes for DJ will be allocated to all the participants.
+                    </h2>
+                    </div>
                   <div className="box ">
                     <h2 style={{ color: "green" }}>
                       Please do enter the proper amount That is being displayed.
