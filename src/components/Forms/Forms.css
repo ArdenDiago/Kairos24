@@ -46,18 +46,15 @@ video {
   ); /* Adjust the alpha value to make it slightly more transparent */
 }
 
-
 .event-logo {
-    height: 150px; /* Increase the height to accommodate the moved image */
-    width: 100px;
-    background: url("../../assets/img/KairosLogo/Logo.png") no-repeat center center;
-    background-size: 100px;
-    background-position: center 40px; /* Adjust this value to move the image down */
-    margin: auto; 
+  height: 150px; /* Increase the height to accommodate the moved image */
+  width: 100px;
+  background: url("../../assets/img/KairosLogo/Logo.png") no-repeat center
+    center;
+  background-size: 100px;
+  background-position: center 40px; /* Adjust this value to move the image down */
+  margin: auto;
 }
-
-
-
 
 .event-title {
   margin-top: 10px;
@@ -77,7 +74,6 @@ video {
   border: 1px solid #ccc; /* Optional: Add a border for better visibility */
   box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
-
 
 label,
 input,
@@ -137,7 +133,6 @@ option {
   transition: all 0.5s ease;
   text-align: center;
   margin-left: calc(50% -4em);
-  
 }
 
 button:hover {
@@ -209,10 +204,6 @@ button:active {
   margin-top: 15px;
 }
 
-
-
-
-
 /* Style for dropdown options */
 option {
   background-color: #fff;
@@ -242,9 +233,7 @@ option[disabled]:first-of-type {
   z-index: -1;
 }
 
-
-
-.main-title{
+.main-title {
   margin: 0;
 }
 
@@ -256,7 +245,6 @@ option[disabled]:first-of-type {
   padding: 40px;
   margin: auto;
   box-sizing: border-box;
-
 }
 .sf {
   font-size: 15px; /* Adjust the font size based on viewport width */
@@ -265,26 +253,26 @@ option[disabled]:first-of-type {
   color: white; /* Text color */
   border: none; /* Remove button border */
   cursor: pointer; /* Add cursor pointer */
-  transition: background-color 0.3s; 
+  transition: background-color 0.3s;
   padding-right: 200px;
-
 }
 .sf:hover {
   background-color: #0056b3;
- /* Glow effect */
+  /* Glow effect */
   color: white;
-   /* Change background color on hover */
+  /* Change background color on hover */
 }
-.myform{
+.myform {
   background-image: url("https://images.app.goo.gl/CbuQPWSgXChgdM4y6");
   background-color: rgb(20, 20, 20);
 }
-.form-container{
+.form-container {
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 0;
 }
-.gt, .main-title{
+.gt,
+.main-title {
   padding-top: 50px;
   /* background-color: black; */
 }
@@ -304,20 +292,17 @@ option[disabled]:first-of-type {
   top: 10px;
 }
 
-
 @media screen and (min-width: 601px) and (max-width: 900px) {
   label {
     margin-bottom: 18px;
   }
 }
 
-
 @media screen and (min-width: 901px) and (max-width: 1440px) {
   label {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
 }
-
 
 /* Monitors (1441px and above) */
 @media screen and (min-width: 1441px) {
@@ -325,8 +310,6 @@ option[disabled]:first-of-type {
     margin-bottom: 25px; /* Increase margin for large screens */
   }
 }
-
-
 
 .sf {
   padding: 17px 40px;
@@ -386,7 +369,7 @@ button:active {
 
 @media (max-width: 600px) {
   .form-container {
-    padding: 0px; 
+    padding: 0px;
     width: 250px;
   }
 
@@ -397,7 +380,6 @@ button:active {
   .inputs > button {
     padding: 10px 20px; /* Adjust button padding */
   }
- 
 }
 label {
   margin-bottom: 20px;
@@ -430,7 +412,7 @@ label {
   }
 }
 
-@media  screen and (min-width: 321px) and (max-width: 375px) {
+@media screen and (min-width: 321px) and (max-width: 375px) {
   video {
     width: 510%;
   }
@@ -442,14 +424,13 @@ label {
   }
 }
 
-@media  screen and (min-width: 376px) and (max-width: 425px) {
+@media screen and (min-width: 376px) and (max-width: 425px) {
   video {
     width: 362%;
   }
-
 }
 
-@media  screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 426px) and (max-width: 768px) {
   video {
     width: 350%;
   }
@@ -461,16 +442,14 @@ label {
   }
 }
 
-@media  screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   video {
     width: 186%;
   }
-
 }
 
-@media  screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
   video {
     width: 150%;
   }
-
 }
