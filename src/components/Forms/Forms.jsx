@@ -45,6 +45,7 @@ export default function Forms() {
     reverse_charades: 300,
     group_dance: 600,
     fashion_show: 800,
+    DJ:50,
   };
 
   // State for submission confirmation
@@ -266,6 +267,13 @@ export default function Forms() {
                     eventID={["group_dance", "fashion_show"]}
                     handleChange={checkboxActive}
                   />
+                  <Event
+                  className="d"
+                  category="DJ"
+                  eventID={["DJ"]}
+                  handleChange={checkboxActive}
+                  />
+
                   <div className="box ">
                     <h2 style={{ color: "green" }}>
                       Please do enter the proper amount That is being displayed.

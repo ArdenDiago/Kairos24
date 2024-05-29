@@ -119,6 +119,10 @@ option {
   border-radius: 50px;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .fb {
   padding: 1.4em 4em;
   color: white;
