@@ -209,6 +209,9 @@ body {
     width: 100%;
   }
 }
+.pb-10 {
+    padding-bottom: 2em;
+}
 * {
     font-family: Nunito, sans-serif;
   }
