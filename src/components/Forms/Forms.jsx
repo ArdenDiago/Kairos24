@@ -12,6 +12,7 @@ export default function Forms() {
   const [name, setName] = useState("");
   const [phoneNO, setPhoneNO] = useState("");
   const [collegeName, setCollegeName] = useState("");
+  const [emailId, setEmailId] = useState("");
   const [totalAmount, setTotalAmount] = useState(0);
 
   // Set ReadOnly
@@ -66,6 +67,9 @@ export default function Forms() {
     if (collegeName.length === 0) {
       errors.push("Enter your college name");
     }
+    if(emailId.length == 0) {
+      errors.push("Enter a valid Email ID");
+    }
     setLogError(errors);
     if (errors.length === 0) {
       setReadOnly((isReadOnly) => !isReadOnly);
@@ -101,6 +105,7 @@ export default function Forms() {
       formData.append("entry.480650766", name);
       formData.append("entry.484946341", phoneNO);
       formData.append("entry.1573106079", collegeName);
+      formData.append("entry.61979601", emailId)
 
       Object.keys(selectedEvents).forEach((eventKey) => {
         formData.append(
@@ -192,10 +197,10 @@ export default function Forms() {
                   textType="email"
                   textId="Email"
                   textPlaceHolder="Enter your E-mail id"
-                  onValueChange={(e) => setCollegeName(e.target.value)}
+                  onValueChange={(e) => setEmailId(e.target.value)}
                   ability={isReadOnly}
-                  name="entry.1573106079"
-                  value={collegeName}
+                  name="entry.61979601"
+                  value={emailId}
                 />
 
                 <br />
@@ -219,6 +224,7 @@ export default function Forms() {
             <input type="hidden" name="entry.480650766" value={name} />
             <input type="hidden" name="entry.484946341" value={phoneNO} />
             <input type="hidden" name="entry.1573106079" value={collegeName} />
+            <input type="hidden" name="entry.61979601" value={emailId} />
             {Object.keys(selectedEvents).map((eventKey, index) => (
               <input
                 type="hidden"
