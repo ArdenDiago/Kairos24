@@ -1,22 +1,19 @@
-import Header from "./components/Home/Header/Header";
-import AboutUs from "./components/AboutUs/AboutUs";
-import Forms from "./components/Forms/Forms";
-import Loader from "./components/Loader.jsx/Loader";
-import CardEvents from "./components/Events/CardEvents.jsx";
-import OurTeam from "./components/OurTeam/OurTeam.jsx";
-import { Suspense } from "react";
+import HomePage from "./HomePage";
+import OurTeam from "./components/OurTeam/OurTeam";
+
+// Making the Routing Feature
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  
   return (
     <>
-      <Suspense fallback={<Loader />}>
-        <OurTeam />
-        {/* <Header /> */}
-        {/* <CardEvents /> */}
-        {/* <Forms /> */}
-        {/* <AboutUs /> */}
-      </Suspense>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="Team" element={<OurTeam />} />
+        </Routes>
+      </BrowserRouter>
+
     </>
   );
 }

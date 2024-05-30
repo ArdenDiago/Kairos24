@@ -1,11 +1,16 @@
 import "./Button.css";
 
-export default function Button({ text, clickHandler, btnTarget }) {
+export default function Button({
+  classNameDefined,
+  text,
+  btnTarget,
+}) {
   return (
-    <button className="buttonhome">
-      <a href={clickHandler} target={btnTarget} rel="noopener noreferrer">
-        <p>{text}</p>
-      </a>
+    <button
+      className={classNameDefined}
+      onClick={btnTarget}
+    >
+      {text}
     </button>
   );
 }
