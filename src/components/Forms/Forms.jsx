@@ -192,7 +192,7 @@ export default function Forms() {
                   textPlaceHolder="Enter your E-mail id"
                   onValueChange={(e) => setCollegeName(e.target.value)}
                   ability={isReadOnly}
-                  name="entry.1573106079"
+                  name="entry.61979601"
                   value={Email}
                 />
 
