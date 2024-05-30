@@ -32,6 +32,7 @@ export default function Forms() {
     reverse_charades: false,
     group_dance: false,
     fashion_show: false,
+    DJ: false, // Added DJ event
   });
 
   const amountList = {
@@ -114,6 +115,7 @@ export default function Forms() {
             reverse_charades: "entry.1925701189",
             group_dance: "entry.1510089219",
             fashion_show: "entry.1260383185",
+            DJ: "entry.1425398750", // Added entry for DJ
           }[eventKey],
           selectedEvents[eventKey] ? "Yes" : "No"
         );
@@ -129,7 +131,7 @@ export default function Forms() {
           }
         );
         setIsSubmitted(true);
-        alert("Registered!");
+        alert("Thank you for registering, see you on 4th!");
         window.location.reload();
       } catch (error) {
         console.error("Error submitting the form:", error);
@@ -222,6 +224,7 @@ export default function Forms() {
                     reverse_charades: "entry.1925701189",
                     group_dance: "entry.1510089219",
                     fashion_show: "entry.1260383185",
+                    DJ: "entry.1425398750", // Added entry for DJ
                   }[eventKey]
                 }
                 value={selectedEvents[eventKey] ? "Yes" : "No"}
