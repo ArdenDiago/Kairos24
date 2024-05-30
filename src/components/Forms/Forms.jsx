@@ -192,8 +192,8 @@ export default function Forms() {
                   textPlaceHolder="Enter your E-mail id"
                   onValueChange={(e) => setCollegeName(e.target.value)}
                   ability={isReadOnly}
-                  name="entry.61979601"
-                  value={Email}
+                  name="entry.1573106079"
+                  value={collegeName}
                 />
 
                 <br />
@@ -217,7 +217,6 @@ export default function Forms() {
             <input type="hidden" name="entry.480650766" value={name} />
             <input type="hidden" name="entry.484946341" value={phoneNO} />
             <input type="hidden" name="entry.1573106079" value={collegeName} />
-            <input type="hidden" name="entry.61979601" value={Email} />
             {Object.keys(selectedEvents).map((eventKey, index) => (
               <input
                 type="hidden"
