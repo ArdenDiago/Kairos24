@@ -187,7 +187,7 @@ export default function Forms() {
                 />
                 <NamesAndPhoneNo
                   text="Email"
-                  textType="text"
+                  textType="email"
                   textId="Email"
                   textPlaceHolder="Enter your E-mail id"
                   onValueChange={(e) => setCollegeName(e.target.value)}
