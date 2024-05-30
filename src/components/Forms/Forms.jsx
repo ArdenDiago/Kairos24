@@ -67,7 +67,7 @@ export default function Forms() {
     if (collegeName.length === 0) {
       errors.push("Enter your college name");
     }
-    if(emailId.length == 0) {
+    if(emailId.length == 0 || emailId.endsWith("@gmail.com") == false) {
       errors.push("Enter a valid Email ID");
     }
     setLogError(errors);
@@ -288,6 +288,11 @@ export default function Forms() {
                   />
                   <div className="box ">
                     <h2 style={{ color: "green", textAlign: "center" }}>
+                      E-certificate will be provided to all the participants!
+                    </h2>
+                  </div>
+                  <div className="box ">
+                    <h2 style={{ color: "green", textAlign: "center" }}>
                       The DJ option is only for the Non-Participants. Free
                       Passes for DJ will be allocated to all the participants.
                     </h2>
@@ -301,7 +306,7 @@ export default function Forms() {
 
                   <div className="box ">
                     <h2 style={{ color: "green" }}>
-                      Please do enter the proper amount That is being displayed.
+                      Please enter the exact amount that is being displayed.
                     </h2>
                     <div className="my-payment">
                       <h1>Amount: {totalAmount}</h1>
