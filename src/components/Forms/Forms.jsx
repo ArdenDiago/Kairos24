@@ -188,7 +188,7 @@ export default function Forms() {
                 <NamesAndPhoneNo
                   text="Email"
                   textType="text"
-                  textId="collegeName"
+                  textId="Email"
                   textPlaceHolder="Enter your E-mail id"
                   onValueChange={(e) => setCollegeName(e.target.value)}
                   ability={isReadOnly}
