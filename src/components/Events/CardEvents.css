@@ -80,6 +80,10 @@ grid-template-columns: auto auto;
 @media screen and (min-width: 321px) and (max-width: 375px) {
   .my-Card-div {
     grid-template-columns: auto;
+
+  }
+  .card-size{
+    margin: 1px;
   }
   :root {
     --CardSize: 311px

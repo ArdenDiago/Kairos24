@@ -4,7 +4,7 @@ import "./Events.css";
 import svgFile from "./errorImg.svg";
 import NamesAndPhoneNo from "./NamesAndPhoneNo";
 import Event from "./Events";
-import whatappLink from '../../assets/img/Send.jpg';
+import whatappLink from "../../assets/img/Send.jpg";
 import formVideo1 from "./JJKregisterMod.mp4";
 
 export default function Forms() {
@@ -12,6 +12,7 @@ export default function Forms() {
   const [name, setName] = useState("");
   const [phoneNO, setPhoneNO] = useState("");
   const [collegeName, setCollegeName] = useState("");
+  const [emailId, setEmailId] = useState("");
   const [totalAmount, setTotalAmount] = useState(0);
 
   // Set ReadOnly
@@ -32,6 +33,7 @@ export default function Forms() {
     reverse_charades: false,
     group_dance: false,
     fashion_show: false,
+    DJ: false, // Added DJ event
   });
 
   const amountList = {
@@ -45,7 +47,11 @@ export default function Forms() {
     reverse_charades: 300,
     group_dance: 600,
     fashion_show: 800,
+    DJ: 50,
   };
+
+  // State for submission confirmation
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function checker() {
     const errors = [];
@@ -60,6 +66,9 @@ export default function Forms() {
     }
     if (collegeName.length === 0) {
       errors.push("Enter your college name");
+    }
+    if(emailId.length == 0 || emailId.endsWith("@gmail.com") == false) {
+      errors.push("Enter a valid Email ID");
     }
     setLogError(errors);
     if (errors.length === 0) {
@@ -86,11 +95,52 @@ export default function Forms() {
     setTotalAmount(total);
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     checker();
+
     if (logError.length === 0) {
-      document.getElementById("myForm").submit();
+      const formData = new FormData();
+
+      formData.append("entry.480650766", name);
+      formData.append("entry.484946341", phoneNO);
+      formData.append("entry.1573106079", collegeName);
+      formData.append("entry.61979601", emailId)
+
+      Object.keys(selectedEvents).forEach((eventKey) => {
+        formData.append(
+          {
+            coding: "entry.1371549682",
+            it_quiz: "entry.844299347",
+            it_manager: "entry.1136504761",
+            treasure_hunt: "entry.712945024",
+            bgmi: "entry.578974792",
+            among_us: "entry.1491703766",
+            nfs: "entry.620680496",
+            reverse_charades: "entry.1925701189",
+            group_dance: "entry.1510089219",
+            fashion_show: "entry.1260383185",
+            DJ: "entry.1425398750", // Added entry for DJ
+          }[eventKey],
+          selectedEvents[eventKey] ? "Yes" : "No"
+        );
+      });
+
+      try {
+        await fetch(
+          "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0n_XvZRkXJWoUkYOY7REzZX7N8GMnpAJRzlHqISEAUOF2Kg/formResponse",
+          {
+            method: "POST",
+            body: formData,
+            mode: "no-cors",
+          }
+        );
+        setIsSubmitted(true);
+        alert("Thank you for registering, see you on 4th!");
+        window.location.reload();
+      } catch (error) {
+        console.error("Error submitting the form:", error);
+      }
     }
   }
 
@@ -100,18 +150,14 @@ export default function Forms() {
 
   return (
     <>
-      <section id='Reg' className="section-info">
+      <section id="Reg" className="section-info">
         <section className="myform">
           <video loop autoPlay muted width="100%">
             <source src={formVideo1} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
-          <form
-            id="myForm"
-            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc0n_XvZRkXJWoUkYOY7REzZX7N8GMnpAJRzlHqISEAUOF2Kg/formResponse"
-            method="POST"
-          >
+          <form id="myForm" onSubmit={handleSubmit}>
             <div className="form-container">
               <div className="event-logo"></div>
               <div className="event-title">KAIROS 24</div>
@@ -146,6 +192,16 @@ export default function Forms() {
                   name="entry.1573106079"
                   value={collegeName}
                 />
+                <NamesAndPhoneNo
+                  text="Email"
+                  textType="email"
+                  textId="Email"
+                  textPlaceHolder="Enter your E-mail id"
+                  onValueChange={(e) => setEmailId(e.target.value)}
+                  ability={isReadOnly}
+                  name="entry.61979601"
+                  value={emailId}
+                />
 
                 <br />
                 <div className="snackBar">
@@ -168,6 +224,7 @@ export default function Forms() {
             <input type="hidden" name="entry.480650766" value={name} />
             <input type="hidden" name="entry.484946341" value={phoneNO} />
             <input type="hidden" name="entry.1573106079" value={collegeName} />
+            <input type="hidden" name="entry.61979601" value={emailId} />
             {Object.keys(selectedEvents).map((eventKey, index) => (
               <input
                 type="hidden"
@@ -183,6 +240,7 @@ export default function Forms() {
                     reverse_charades: "entry.1925701189",
                     group_dance: "entry.1510089219",
                     fashion_show: "entry.1260383185",
+                    DJ: "entry.1425398750", // Added entry for DJ
                   }[eventKey]
                 }
                 value={selectedEvents[eventKey] ? "Yes" : "No"}
@@ -229,8 +287,26 @@ export default function Forms() {
                     handleChange={checkboxActive}
                   />
                   <div className="box ">
+                    <h2 style={{ color: "green", textAlign: "center" }}>
+                      E-certificate will be provided to all the participants!
+                    </h2>
+                  </div>
+                  <div className="box ">
+                    <h2 style={{ color: "green", textAlign: "center" }}>
+                      The DJ option is only for the Non-Participants. Free
+                      Passes for DJ will be allocated to all the participants.
+                    </h2>
+                  </div>
+                  <Event
+                    className="d"
+                    category="DJ"
+                    eventID={["DJ"]}
+                    handleChange={checkboxActive}
+                  />
+
+                  <div className="box ">
                     <h2 style={{ color: "green" }}>
-                      Please do enter the proper amount That is being displayed.
+                      Please enter the exact amount that is being displayed.
                     </h2>
                     <div className="my-payment">
                       <h1>Amount: {totalAmount}</h1>
@@ -246,7 +322,11 @@ export default function Forms() {
                     </div>
                   </div>
                   <div className="box whatsapp">
-                    <h1>Please send the Receipt on this phone number:<br /><br /> +91 7208715575</h1>
+                    <h1>
+                      Please send the Receipt on this phone number:
+                      <br />
+                      <br /> +91 7208715575
+                    </h1>
                     <img src={whatappLink} alt="" />
                   </div>
                   <button onClick={handleSubmit}>Submit</button>

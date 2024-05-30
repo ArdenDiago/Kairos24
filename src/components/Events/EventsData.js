@@ -28,7 +28,7 @@ export const eventList = [
     eventImg: ItQuiz,
     eventName: "IT Quiz",
     time: "10:30 AM",
-    venu: "Room No",
+    venu: "Mini Audi",
     regAMT: "250",
     codName: [
       { name: "Rakshitha", number: "8050327122" },
@@ -53,7 +53,7 @@ export const eventList = [
     eventName: "Treasure Hunt",
     time: "10:00 AM",
     venu: "Basketball Court",
-    regAMT: "500",
+    regAMT: "400",
     codName: [
       { name: "Joe", number: "9019986924" },
       { name: "Maithili", number: "8660214087" },
