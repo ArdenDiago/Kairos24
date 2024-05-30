@@ -193,7 +193,7 @@ export default function Forms() {
                   onValueChange={(e) => setCollegeName(e.target.value)}
                   ability={isReadOnly}
                   name="entry.1573106079"
-                  value={collegeName}
+                  value={Email}
                 />
 
                 <br />
