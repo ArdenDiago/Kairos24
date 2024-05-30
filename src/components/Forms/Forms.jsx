@@ -185,6 +185,16 @@ export default function Forms() {
                   name="entry.1573106079"
                   value={collegeName}
                 />
+                <NamesAndPhoneNo
+                  text="Email"
+                  textType="text"
+                  textId="collegeName"
+                  textPlaceHolder="Enter your E-mail id"
+                  onValueChange={(e) => setCollegeName(e.target.value)}
+                  ability={isReadOnly}
+                  name="entry.1573106079"
+                  value={collegeName}
+                />
 
                 <br />
                 <div className="snackBar">
