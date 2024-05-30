@@ -45,7 +45,7 @@ export default function Forms() {
     reverse_charades: 300,
     group_dance: 600,
     fashion_show: 800,
-    DJ:50,
+    DJ: 50,
   };
 
   // State for submission confirmation
@@ -267,18 +267,19 @@ export default function Forms() {
                     eventID={["group_dance", "fashion_show"]}
                     handleChange={checkboxActive}
                   />
+                  <div className="box ">
+                    <h2 style={{ color: "green", textAlign: "center" }}>
+                      The DJ option is only for the Non-Participants. Free
+                      Passes for DJ will be allocated to all the participants.
+                    </h2>
+                  </div>
                   <Event
-                  className="d"
-                  category="DJ"
-                  eventID={["DJ"]}
-                  handleChange={checkboxActive}
+                    className="d"
+                    category="DJ"
+                    eventID={["DJ"]}
+                    handleChange={checkboxActive}
                   />
 
-                    <div className="box ">
-                    <h2 style={{ color: "green", textAlign:"center" }}>
-                      The DJ option is only for the Non-Participants. Free Passes for DJ will be allocated to all the participants.
-                    </h2>
-                    </div>
                   <div className="box ">
                     <h2 style={{ color: "green" }}>
                       Please do enter the proper amount That is being displayed.
