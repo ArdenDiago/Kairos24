@@ -306,7 +306,7 @@ export default function Forms() {
 
                   <div className="box ">
                     <h2 style={{ color: "green" }}>
-                      Participant who have registered for the events through online payment kindly show the screenshot of the payment at the Registration Desk!
+                      Participant who have registered for the events through online payment kindly show the screenshot of the payment at the Registration Desk.
                     
                     </h2>
                     
