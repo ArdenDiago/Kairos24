@@ -306,29 +306,15 @@ export default function Forms() {
 
                   <div className="box ">
                     <h2 style={{ color: "green" }}>
-                      Please enter the exact amount that is being displayed.
+                      Participant who have registered for the events through online payment kindly show the screenshot of the payment at the Registration Desk!
+                      
+
                     </h2>
-                    <div className="my-payment">
-                      <h1>Amount: {totalAmount}</h1>
-                      <label>
-                        <a
-                          href="https://rzp.io/l/f0MEd2Ld6w"
-                          style={{ color: "black" }}
-                          target="blank"
-                        >
-                          Click To Pay
-                        </a>
-                      </label>
-                    </div>
+                    
+                    
+                    
                   </div>
-                  <div className="box whatsapp">
-                    <h1>
-                      Please send the Receipt on this phone number:
-                      <br />
-                      <br /> +91 7208715575
-                    </h1>
-                    <img src={whatappLink} alt="" />
-                  </div>
+                  
                   <button onClick={handleSubmit}>Submit</button>
                 </div>
               </section>
