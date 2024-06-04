@@ -111,7 +111,7 @@ export const eventList = [
   {
     eventImg: GroupDance,
     eventName: "Group Dance",
-    time: "02:00 AM",
+    time: "02:00 PM",
     venu: "Main Audi",
     regAMT: "600",
     codName: [
@@ -123,7 +123,7 @@ export const eventList = [
   {
     eventImg: FassionShow,
     eventName: "Fashion Walk",
-    time: "03:00 AM",
+    time: "03:00 PM",
     venu: "Main Audi",
     regAMT: "800",
     codName: [
