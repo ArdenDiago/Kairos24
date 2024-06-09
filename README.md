@@ -5,8 +5,8 @@ Welcome to the official repository for the Kairos 24 Website, created for our co
 | **Name** | **Role** |
 | :----- | -----|
 | Arden Diago | Project Lead, Full Project Handling |
-| Dharshit | Frontend Development |
-| Jeetandar | Backend Development |
+| Dharshit | Backend Development |
+| Jeetandar | Frontend Development |
 
 ## **_Project Overview_**
 The Kairos 24 Website was developed to provide information about our IT fest and facilitate the registration process for participants from other colleges. The project was a great learning experience, and we gained valuable insights into front and backend development.
