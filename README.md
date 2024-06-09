@@ -1,7 +1,7 @@
 # **_Kairos 24 Official Website_**
 Welcome to the official repository for the Kairos 24 Website, created for our college IT fest. This website is a platform to invite other colleges to participate in our fest. The project was a collaborative effort among three team members, with each of us contributing to different aspects of the development.
 
-## **_Team Members_**_
+## **_Team Members_**
 | **Name** | **Role** |
 | :----- | -----|
 | Arden Diago | Project Lead, Full Project Handling |
